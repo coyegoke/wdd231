@@ -64,11 +64,6 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    .hero-overlay-text {
-        font-size: 1.2em;
-        padding: 8px 15px;
-    }
-
     .keynote-tickets {
         bottom: 10px;
         right: 10px;
@@ -118,11 +113,6 @@
 
     .hero-image {
         height: 200px;
-    }
-
-    .hero-overlay-text {
-        font-size: 1em;
-        padding: 5px 10px;
     }
 
     .keynote-tickets {
