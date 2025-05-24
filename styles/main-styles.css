@@ -1,0 +1,307 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #555;
+    --accent-color: #007bff;
+    --light-bg: #f4f4f4;
+    --white: #fff;
+    --border-color: #ddd;
+    --font-family: "Roboto", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--primary-color);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header */
+.header {
+    background-color: var(--white);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.2em;
+    line-height: 1.1;
+    margin-bottom: 0;
+}
+
+/* Navigation */
+.main-nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav .nav-links li {
+    margin-left: 20px;
+}
+
+.main-nav .nav-links a {
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.main-nav .nav-links a:hover,
+.main-nav .nav-links a.active {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.hamburger-menu {
+    display: none;
+    /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    background-color: var(--secondary-color);
+    margin-bottom: 30px;
+    padding: 10px 0;
+}
+
+.hero .container {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.keynote-tickets {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.keynote-tickets:hover {
+    background-color: #0056b3;
+}
+
+/* Home Sections */
+.home-sections {
+    margin-bottom: 30px;
+}
+
+.home-sections h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.section-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.current-weather .weather-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.current-weather .temperature {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.current-weather .weather-icon {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* Business Listings */
+.business-listings {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-bottom: 30px;
+}
+
+.business-card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.business-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.business-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.business-card .tag-line {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-info,
+.social-media,
+.footer-meta {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-info h4 {
+    text-align: left;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+    /* To make icons white */
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+.footer-meta {
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.footer-meta p {
+    margin-bottom: 5px;
+}
