@@ -61,7 +61,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color);
   border-radius: 5px;
 }
 
@@ -144,7 +144,7 @@ section {
 
 h2 {
   color: var(--primary-color);
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--secondaty-color);
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
 }
@@ -181,7 +181,7 @@ h2 {
 
 .course-filters button:hover,
 .course-filters button.active {
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color);
 }
 
 .courses-container {
@@ -227,7 +227,7 @@ h2 {
 
 .course-card .credits {
   font-weight: bold;
-  color: var(--accent-color);
+  color: var(--secondary-color);
 }
 
 .course-card .technologies {
