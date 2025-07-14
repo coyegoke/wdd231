@@ -142,12 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
         creditsTotalSpan.textContent = totalCredits;
     }
 
-    // Step 3.7 & 3.8: Filter functionality
+    // Filter functionality
     filterButtons.forEach(button => {
         button.addEventListener('click', (event) => {
-            // Remove active class from all buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to the clicked button
             event.target.classList.add('active');
 
             const filterType = event.target.id;
