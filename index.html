@@ -7,7 +7,9 @@
     <meta name="description" content="Responsive course website with filterable course list" />
     <meta name="author" content="Oyetunji Cornelius Oyegoke" />
     <title>Responsive Course Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css" />
     <script src="scripts/script.js" defer></script>
 </head>
@@ -15,10 +17,7 @@
 <body>
     <header>
         <div class="site-branding">
-            <svg class="site-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="40" fill="#333" />
-                <text x="50" y="60" font-family="Arial" font-size="40" text-anchor="middle" fill="#fff">O</text>
-            </svg>
+            <img class="site-logo" src="images/global-buisness.svg" alt="wbsite-logo">
             <span class="site-name">Oyetunji Cornelius Oyegoke</span>
         </div>
         <button class="hamburger-menu" aria-label="Toggle navigation">
@@ -29,8 +28,8 @@
         <nav>
             <ul>
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#chamber.html" target="_blank">Chamber Project</a></li>
-                <li><a href="#finalproject" target="_blank">Final Project</a></li>
+                <li><a href="#chamber.html" target="_blank">Chamber</a></li>
+                <li><a href="#finalproject" target="_blank">Final</a></li>
             </ul>
         </nav>
     </header>
