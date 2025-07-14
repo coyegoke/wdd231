@@ -150,12 +150,13 @@ h2 {
 }
 
 .student-photo .photo-placeholder {
-  width: 200px;
-  height: 200px;
-  background-color: #ccc;
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
   border-radius: 50%;
+  object-fit: cover;
   margin: 0 auto;
-  display: block;
+  display: flex;
   overflow: hidden;
 }
 
