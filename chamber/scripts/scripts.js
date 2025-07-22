@@ -1,111 +1,95 @@
-const courses = [
-    {
-        subject: 'CSE',
-        number: 110,
-        title: 'Introduction to Programming',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
-        technology: [
-            'Python'
-        ],
-        completed: false
-    },
-    {
-        subject: 'WDD',
-        number: 130,
-        title: 'Web Fundamentals',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming. It is anticipated that students who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
-        technology: [
-            'HTML',
-            'CSS'
-        ],
-        completed: false
-    },
-    {
-        subject: 'CSE',
-        number: 111,
-        title: 'Programming with Functions',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'CSE 111 students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call , debug, and test their own functions; and to handle errors within functions. CSE 111 students write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.',
-        technology: [
-            'Python'
-        ],
-        completed: false
-    },
-    {
-        subject: 'CSE',
-        number: 210,
-        title: 'Programming with Classes',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
-        technology: [
-            'C#'
-        ],
-        completed: false
-    },
-    {
-        subject: 'WDD',
-        number: 131,
-        title: 'Dynamic Web Fundamentals',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
-        technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
-        completed: false
-    },
-    {
-        subject: 'WDD',
-        number: 231,
-        title: 'Frontend Web Development I',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
-        technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
-        completed: false
-    }
-]
+// js/script.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Set the last modified date in the footer
-    const lastModifiedElement = document.getElementById('lastModified');
-    if (lastModifiedElement) {
-        lastModifiedElement.textContent = document.lastModified;
+    // Dynamically set copyright year
+    const copyrightYearSpan = document.getElementById('copyright-year');
+    if (copyrightYearSpan) {
+        copyrightYearSpan.textContent = new Date().getFullYear();
     }
 
-    // Mobile Navigation (Hamburger Menu)
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
+    // Dynamically set last modification date
+    const lastModifiedSpan = document.getElementById('last-modified');
+    if (lastModifiedSpan) {
+        lastModifiedSpan.textContent = document.lastModified;
+    }
 
-    if (hamburgerMenu && navLinks) {
-        hamburgerMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburgerMenu.classList.toggle('active'); // For animation
+    // Mobile Navigation Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
         });
+    }
 
-        // Close nav when a link is clicked (optional, for single-page apps)
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    hamburgerMenu.classList.remove('active');
+    // Directory Page Specific Logic
+    const membersContainer = document.getElementById('members-container');
+    const gridViewBtn = document.getElementById('grid-view-btn');
+    const listViewBtn = document.getElementById('list-view-btn');
+
+    if (membersContainer && gridViewBtn && listViewBtn) {
+        const fetchMembers = async () => {
+            try {
+                const response = await fetch('data/members.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
                 }
-            });
-        });
-    }
+                const members = await response.json();
+                displayMembers(members.members, 'grid'); // Default to grid view, access 'members' array
+            } catch (error) {
+                console.error('Error fetching members:', error);
+                membersContainer.innerHTML = '<p>Error loading member data. Please try again later.</p>';
+            }
+        };
 
-    // You can add more JavaScript for other interactive elements here if needed
-    // For example, carousels, form validation, dynamic content loading, etc.
+        const displayMembers = (members, viewType) => {
+            membersContainer.innerHTML = ''; // Clear existing content
+            membersContainer.className = ''; // Clear existing classes
+            membersContainer.classList.add(viewType === 'grid' ? 'grid-view' : 'list-view');
+
+            members.forEach(member => {
+                const memberElement = document.createElement('div');
+                memberElement.classList.add(viewType === 'grid' ? 'member-card' : 'member-list-item');
+
+                // Determine membership level text
+                let membershipLevelText = '';
+                if (member.membershipLevel === 1) {
+                    membershipLevelText = 'Member';
+                } else if (member.membershipLevel === 2) {
+                    membershipLevelText = 'Silver Member';
+                } else if (member.membershipLevel === 3) {
+                    membershipLevelText = 'Gold Member';
+                }
+
+                memberElement.innerHTML = `
+                    <img src="images/${member.image}" alt="${member.name} Logo" onerror="this.onerror=null;this.src='https://placehold.co/100x100/e67e22/ffffff?text=Logo'">
+                    <div class="member-details">
+                        <h3>${member.name}</h3>
+                        <p>${member.address}</p>
+                        <p>${member.phone}</p>
+                        <p><a href="${member.website}" target="_blank">${member.website.replace(/(^\w+:|^)\/\//, '')}</a></p>
+                        <p class="membership-level">${membershipLevelText}</p>
+                        <p>${member.description || ''}</p>
+                    </div>
+                `;
+                membersContainer.appendChild(memberElement);
+            });
+        };
+
+        gridViewBtn.addEventListener('click', () => {
+            gridViewBtn.classList.add('active');
+            listViewBtn.classList.remove('active');
+            fetchMembers(); // Re-fetch to ensure data is fresh and re-render with grid view
+        });
+
+        listViewBtn.addEventListener('click', () => {
+            listViewBtn.classList.add('active');
+            gridViewBtn.classList.remove('active');
+            fetchMembers(); // Re-fetch to ensure data is fresh and re-render with list view
+        });
+
+        // Initial fetch and display
+        fetchMembers();
+    }
 });
