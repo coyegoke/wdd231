@@ -1,0 +1,79 @@
+/* 1. Box sizing for all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin from the body */
+body {
+    margin: 0;
+}
+
+/* 3. Set default font for the body */
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    /* Smoother font rendering on WebKit browsers */
+}
+
+/* 4. Improve image responsiveness and prevent overflow */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 5. Remove default margin from headings and paragraphs */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* 6. Remove default list styling */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 7. Make form elements inherit font styles */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Prevent textareas from being resizable only horizontally */
+textarea {
+    resize: vertical;
+}
+
+/* 9. Remove text decoration from links by default */
+a {
+    text-decoration: none;
+    color: inherit;
+    /* Inherit color from parent by default */
+}
+
+/* 10. Improve button cursor */
+button {
+    cursor: pointer;
+}
+
+/* 11. Remove outline on focus for accessibility (use better focus styles) */
+:focus {
+    outline: none;
+}
