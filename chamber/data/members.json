@@ -1,0 +1,76 @@
+{
+    "members": [
+        {
+            "name": "Ife Tech Solutions",
+            "address": "123 Innovation Drive, Ife",
+            "phone": "(234) 801-234-5678",
+            "website": "http://www.ifetech.com",
+            "image": "ifetech-logo.png",
+            "membershipLevel": 3,
+            "description": "Leading software development and IT consulting firm."
+        },
+        {
+            "name": "Golden Harvest Farms",
+            "address": "Rural Route 7, Ife Countryside",
+            "phone": "(234) 802-345-6789",
+            "website": "http://www.goldenharvest.org",
+            "image": "goldenharvest-logo.png",
+            "membershipLevel": 1,
+            "description": "Sustainable agriculture and organic produce supplier."
+        },
+        {
+            "name": "Ife Community Bank",
+            "address": "45 Banking Street, Ife Central",
+            "phone": "(234) 803-456-7890",
+            "website": "http://www.ifebank.com",
+            "image": "ifebank-logo.png",
+            "membershipLevel": 3,
+            "description": "Your trusted local financial partner for over 50 years."
+        },
+        {
+            "name": "Artisan Craft Store",
+            "address": "8 Art Lane, Ife Market",
+            "phone": "(234) 804-567-8901",
+            "website": "http://www.artisancraft.com",
+            "image": "artisan-logo.png",
+            "membershipLevel": 2,
+            "description": "Showcasing unique handmade crafts from local artists."
+        },
+        {
+            "name": "Royal Gardens Hotel",
+            "address": "90 Hospitality Blvd, Ife",
+            "phone": "(234) 805-678-9012",
+            "website": "http://www.royalgardens.com",
+            "image": "royalgardens-logo.png",
+            "membershipLevel": 3,
+            "description": "Luxury accommodation and event venue in the heart of Ife."
+        },
+        {
+            "name": "Green Earth Recycling",
+            "address": "22 Eco Park, Ife Industrial Zone",
+            "phone": "(234) 806-789-0123",
+            "website": "http://www.greenearth.org",
+            "image": "greenearth-logo.png",
+            "membershipLevel": 1,
+            "description": "Promoting a cleaner Ife through comprehensive recycling services."
+        },
+        {
+            "name": "Ife Medical Clinic",
+            "address": "6 Health Avenue, Ife North",
+            "phone": "(234) 807-890-1234",
+            "website": "http://www.ifemedical.com",
+            "image": "ifemedical-logo.png",
+            "membershipLevel": 2,
+            "description": "Providing compassionate and quality healthcare to the community."
+        },
+        {
+            "name": "Fastrack Logistics",
+            "address": "15 Warehouse Rd, Ife South",
+            "phone": "(234) 808-901-2345",
+            "website": "http://www.fastracklogistics.com",
+            "image": "fastrack-logo.png",
+            "membershipLevel": 2,
+            "description": "Efficient and reliable shipping and logistics solutions."
+        }
+    ]
+}
