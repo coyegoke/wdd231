@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Timcornels Chamber of Commerce</title>
+    <meta name="description"
+        content="Join the Timcornels Chamber of Commerce and access valuable resources, networking opportunities, and marketing support for your business in Ife.">
+    <meta name="author" content="Oyetunji Cornelius Oyegoke">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Join the Timcornels Chamber of Commerce">
+    <meta property="og:description"
+        content="Become a member of the Timcornels Chamber of Commerce and boost your business in Ife with exclusive benefits and networking.">
+    <meta property="og:image" content="http://www.timcornelschamber.org/images/chamber-logo-social.jpg">
+    <!-- Placeholder image URL -->
+    <meta property="og:url" content="http://www.timcornelschamber.org/join.html"> <!-- Placeholder URL -->
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="site-name">
+                <img src="images/chamber-logo.png" alt="Timcornels Chamber of Commerce Logo"> <!-- Placeholder Logo -->
+                <h1>Timcornels Chamber of Commerce</h1>
+            </div>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container join-page-content">
+        <h2>Join Our Chamber</h2>
+        <p class="intro-text">Becoming a member of the Timcornels Chamber of Commerce connects you with a network of
+            local businesses and provides valuable resources to help your business thrive. Choose the membership level
+            that best suits your needs:</p>
+
+        <section class="membership-levels">
+            <div class="membership-card">
+                <h3>Non-Profit Membership</h3>
+                <p class="price">Free for eligible non-profits</p>
+                <ul>
+                    <li>Basic Directory Listing</li>
+                    <li>Access to general workshops</li>
+                    <li>Community engagement opportunities</li>
+                </ul>
+                <button class="join-btn">Apply Now</button>
+            </div>
+
+            <div class="membership-card">
+                <h3>Silver Membership</h3>
+                <p class="price">$50/month</p>
+                <ul>
+                    <li>Enhanced Directory Listing</li>
+                    <li>Access to all workshops and trainings</li>
+                    <li>Social media mentions</li>
+                    <li>Invitations to exclusive luncheons</li>
+                    <li>Networking event discounts</li>
+                </ul>
+                <button class="join-btn">Apply Now</button>
+            </div>
+
+            <div class="membership-card">
+                <h3>Gold Membership</h3>
+                <p class="price">$150/month</p>
+                <ul>
+                    <li>Premium Directory Listing (featured)</li>
+                    <li>All Silver benefits included</li>
+                    <li>Monthly business spotlight in newsletter</li>
+                    <li>Priority for sponsorship opportunities</li>
+                    <li>Dedicated advertising space on website</li>
+                    <li>One-on-one business consultation</li>
+                </ul>
+                <button class="join-btn">Apply Now</button>
+            </div>
+        </section>
+
+        <section class="membership-application-form">
+            <h3>Membership Application Form</h3>
+            <form action="#" method="post">
+                <label for="name">Business Name:</label>
+                <input type="text" id="name" name="business_name" required>
+
+                <label for="contact-person">Contact Person:</label>
+                <input type="text" id="contact-person" name="contact_person" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Business Address:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+
+                <label for="membership-level">Desired Membership Level:</label>
+                <select id="membership-level" name="membership_level" required>
+                    <option value="">--Select a level--</option>
+                    <option value="non-profit">Non-Profit</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+
+                <label for="reason">Why do you want to join the Chamber?</label>
+                <textarea id="reason" name="reason" rows="5"></textarea>
+
+                <button type="submit" class="submit-form-btn">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="contact-info">
+                <h3>Timcornels Chamber of Commerce</h3>
+                <p>10 Rue De La Paix</p>
+                <p>Timbuktu, Mali 999</p>
+                <p>Email: <a href="mailto:info@timcornels.org">info@timcornels.org</a></p>
+                <p>Phone: (223) 555-2300</p>
+            </div>
+            <div class="social-media">
+                <a href="#" aria-label="Facebook"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" aria-label="Twitter"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" aria-label="LinkedIn"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="copyright-year"></span> Timcornels Chamber of Commerce</p>
+                <p>Oyetunji Cornelius Oyegoke | WDD 231</p>
+                <p>Last Modification: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
