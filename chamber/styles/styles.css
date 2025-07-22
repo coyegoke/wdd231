@@ -338,7 +338,7 @@ main {
 }
 
 .view-toggle-buttons button {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--text-color);
     border: none;
     padding: 0.7rem 1.2rem;
@@ -349,7 +349,7 @@ main {
 }
 
 .view-toggle-buttons button.active {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     font-weight: bold;
 }
 
