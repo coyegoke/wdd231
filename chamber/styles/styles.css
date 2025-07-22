@@ -648,7 +648,7 @@ footer {
 .social-media {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 .social-media img {
