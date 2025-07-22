@@ -14,7 +14,6 @@ body {
 body {
     font-family: sans-serif;
     line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
 }
 
 /* 4. Improve image responsiveness and prevent overflow */

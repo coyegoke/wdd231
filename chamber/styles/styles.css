@@ -156,7 +156,7 @@ main {
 }
 
 .keynote-tickets-btn:hover {
-    background-color: darken(var(--accent-color), 10%);
+    background-color: var(--accent-color);
 }
 
 .home-grid-section {
@@ -543,7 +543,7 @@ main {
 }
 
 .join-btn:hover {
-    background-color: darken(var(--accent-color), 10%);
+    background-color: var(--accent-color);
 }
 
 .membership-application-form {
