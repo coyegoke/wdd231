@@ -24,72 +24,94 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Directory Page Specific Logic
-    const membersContainer = document.getElementById('members-container');
-    const gridViewBtn = document.getElementById('grid-view-btn');
-    const listViewBtn = document.getElementById('list-view-btn');
+    // Get references to the view toggle buttons and the display container
+    const gridbutton = document.querySelector("#grid-view-btn");
+    const listbutton = document.querySelector("#list-view-btn");
+    const display = document.querySelector("#members-container"); // This is our 'article' equivalent
 
-    if (membersContainer && gridViewBtn && listViewBtn) {
-        const fetchMembers = async () => {
-            try {
-                const response = await fetch('data/members.json');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const members = await response.json();
-                displayMembers(members.members, 'grid'); // Default to grid view, access 'members' array
-            } catch (error) {
-                console.error('Error fetching members:', error);
-                membersContainer.innerHTML = '<p>Error loading member data. Please try again later.</p>';
+    let membersData = []; // Store fetched members data globally for easy access
+
+    // Function to fetch member data from JSON
+    const fetchMembers = async () => {
+        try {
+            const response = await fetch('data/members.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
-        };
+            const data = await response.json();
+            membersData = data.members; // Store the fetched members array
+            // Determine initial view based on active button
+            if (gridbutton.classList.contains('active')) {
+                displayMembers(membersData, 'grid');
+            } else {
+                displayMembers(membersData, 'list');
+            }
+        } catch (error) {
+            console.error('Error fetching members:', error);
+            display.innerHTML = '<p>Error loading member data. Please try again later.</p>';
+        }
+    };
 
-        const displayMembers = (members, viewType) => {
-            membersContainer.innerHTML = ''; // Clear existing content
-            membersContainer.className = ''; // Clear existing classes
-            membersContainer.classList.add(viewType === 'grid' ? 'grid-view' : 'list-view');
+    // Function to display members based on the view type (grid or list)
+    const displayMembers = (members, viewType) => {
+        display.innerHTML = ''; // Clear existing content
+        display.classList.remove("grid-view", "list-view"); // Remove existing view classes
+        display.classList.add(viewType === 'grid' ? "grid-view" : "list-view"); // Add the new view class
 
-            members.forEach(member => {
-                const memberElement = document.createElement('div');
-                memberElement.classList.add(viewType === 'grid' ? 'member-card' : 'member-list-item');
+        members.forEach(member => {
+            const memberElement = document.createElement('div');
+            // Apply specific class for individual member item based on the overall view
+            memberElement.classList.add(viewType === 'grid' ? 'member-card' : 'member-list-item');
 
-                // Determine membership level text
-                let membershipLevelText = '';
-                if (member.membershipLevel === 1) {
-                    membershipLevelText = 'Member';
-                } else if (member.membershipLevel === 2) {
-                    membershipLevelText = 'Silver Member';
-                } else if (member.membershipLevel === 3) {
-                    membershipLevelText = 'Gold Member';
-                }
+            // Determine membership level text
+            let membershipLevelText = '';
+            if (member.membershipLevel === 1) {
+                membershipLevelText = 'Member';
+            } else if (member.membershipLevel === 2) {
+                membershipLevelText = 'Silver Member';
+            } else if (member.membershipLevel === 3) {
+                membershipLevelText = 'Gold Member';
+            }
 
-                memberElement.innerHTML = `
-                    <img src="images/${member.image}" alt="${member.name} Logo" onerror="this.onerror=null;this.src='https://placehold.co/100x100/e67e22/ffffff?text=Logo'">
-                    <div class="member-details">
-                        <h3>${member.name}</h3>
-                        <p>${member.address}</p>
-                        <p>${member.phone}</p>
-                        <p><a href="${member.website}" target="_blank">${member.website.replace(/(^\w+:|^)\/\//, '')}</a></p>
-                        <p class="membership-level">${membershipLevelText}</p>
-                        <p>${member.description || ''}</p>
-                    </div>
-                `;
-                membersContainer.appendChild(memberElement);
-            });
-        };
-
-        gridViewBtn.addEventListener('click', () => {
-            gridViewBtn.classList.add('active');
-            listViewBtn.classList.remove('active');
-            fetchMembers(); // Re-fetch to ensure data is fresh and re-render with grid view
+            memberElement.innerHTML = `
+                <img src="images/${member.image}" alt="${member.name} Logo" onerror="this.onerror=null;this.src='https://placehold.co/100x100/e67e22/ffffff?text=Logo'">
+                <div class="member-details">
+                    <h3>${member.name}</h3>
+                    <p>${member.address}</p>
+                    <p>${member.phone}</p>
+                    <p><a href="${member.website}" target="_blank">${member.website.replace(/(^\w+:|^)\/\//, '')}</a></p>
+                    <p class="membership-level">${membershipLevelText}</p>
+                    <p>${member.description || ''}</p>
+                </div>
+            `;
+            display.appendChild(memberElement);
         });
+    };
 
-        listViewBtn.addEventListener('click', () => {
-            listViewBtn.classList.add('active');
-            gridViewBtn.classList.remove('active');
-            fetchMembers(); // Re-fetch to ensure data is fresh and re-render with list view
+    // Event listener for Grid View button
+    if (gridbutton) {
+        gridbutton.addEventListener("click", () => {
+            display.classList.add("grid-view");
+            display.classList.remove("list-view");
+            gridbutton.classList.add('active');
+            listbutton.classList.remove('active');
+            displayMembers(membersData, 'grid'); // Re-render with grid view
         });
-
-        // Initial fetch and display
-        fetchMembers();
     }
+
+    // Event listener for List View button
+    if (listbutton) {
+        listbutton.addEventListener("click", showList); // Using a named function as per sample
+
+        function showList() {
+            display.classList.add("list-view");
+            display.classList.remove("grid-view");
+            listbutton.classList.add('active');
+            gridbutton.classList.remove('active');
+            displayMembers(membersData, 'list'); // Re-render with list view
+        }
+    }
+
+    // Initial fetch and display of members when the page loads
+    fetchMembers();
 });
