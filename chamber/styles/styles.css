@@ -361,21 +361,25 @@ main {
     font-weight: bold;
 }
 
+/* Styles for the main display container (#members-container) */
 #members-container.grid-view {
     display: grid;
     grid-template-columns: 1fr;
-    /* Default to single column */
+    /* Default to single column on small screens */
     gap: 1.5rem;
 }
 
 #members-container.list-view {
     display: flex;
     flex-direction: column;
+    /* Stack items vertically */
     gap: 0.5rem;
+    /* Smaller gap between list items */
 }
 
-.member-card,
-.member-list-item {
+/* Styles for individual member items */
+.member-card {
+    /* Used when #members-container has .grid-view */
     background-color: #fff;
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -384,31 +388,49 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Center content in grid view */
+    /* Center content horizontally in grid card */
     text-align: center;
 }
 
 .member-list-item {
-    flex-direction: row;
-    /* Row for list view */
-    align-items: flex-start;
-    text-align: left;
-    gap: 1rem;
+    /* Used when #members-container has .list-view */
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    /* Slightly less padding for list items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    /* Default to column for small screens in list view */
+    align-items: center;
+    /* Center content for small screens in list view */
+    text-align: center;
+    /* Center text for small screens in list view */
+    transition: background-color 0.2s ease;
 }
+
+.member-list-item:hover {
+    background-color: var(--light-bg);
+}
+
 
 .member-card img,
 .member-list-item img {
     max-width: 100px;
     height: auto;
     margin-bottom: 1rem;
+    /* Margin below image in card view */
     border-radius: 5px;
 }
 
 .member-list-item img {
     flex-shrink: 0;
     /* Prevent image from shrinking in list view */
-    margin-bottom: 0;
-    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    /* Smaller margin below image in list view on mobile */
+    margin-right: 0;
+    /* No right margin on mobile */
 }
 
 .member-card h3,
@@ -441,11 +463,15 @@ main {
     flex-direction: column;
     align-items: center;
     /* Center details in grid view */
+    width: 100%;
+    /* Take full width in column layout */
 }
 
 .member-list-item .member-details {
-    align-items: flex-start;
-    /* Align details to start in list view */
+    align-items: center;
+    /* Default for small screens */
+    text-align: center;
+    /* Default for small screens */
 }
 
 .membership-level {
@@ -704,8 +730,18 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Directory page: Grid view on larger screens */
     #members-container.grid-view {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /* Directory page: List view on larger screens */
+    #members-container.list-view {
+        /* Ensure it remains a single column layout for the list */
+        grid-template-columns: 1fr;
+        /* Explicitly one column */
+        display: grid;
+        /* Use grid for consistent spacing and alignment */
     }
 
     .member-card {
@@ -717,6 +753,32 @@ footer {
     .member-card img {
         margin-left: 0;
     }
+
+    .member-list-item {
+        flex-direction: row;
+        /* Image and text side-by-side in list view */
+        align-items: flex-start;
+        /* Align items to the top */
+        text-align: left;
+        /* Align text left */
+        padding: 1rem 1.5rem;
+        /* Consistent padding */
+    }
+
+    .member-list-item img {
+        margin-right: 1.5rem;
+        /* Space between image and text in list view */
+        margin-bottom: 0;
+        /* Remove bottom margin if image is inline */
+    }
+
+    .member-list-item .member-details {
+        align-items: flex-start;
+        /* Align details to start in list view */
+        text-align: left;
+        /* Align text left in list view */
+    }
+
 
     .membership-levels {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
