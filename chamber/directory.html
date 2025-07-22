@@ -4,129 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Oyegoke C. Oyetunji">
-    <meta name="description" content="Wdd231 - Oyegoke C. oyetunji - Chamber of Commerce Project">
+    <title>Directory - Timcornels Chamber of Commerce</title>
+    <meta name="description"
+        content="Explore the directory of local businesses and organizations in Ife and surrounding areas.">
+    <meta name="author" content="Oyetunji Cornelius Oyegoke">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Timcornels Chamber of Commerce Directory">
+    <meta property="og:description"
+        content="Find local businesses, organizations, and services in Ife through the Timcornels Chamber of Commerce directory.">
+    <meta property="og:image" content="http://www.timcornelschamber.org/images/chamber-logo-social.jpg">
+    <meta property="og:url" content="http://www.timcornelschamber.org/directory.html">
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/main-styles.css">
     <script src="scripts/scripts.js" defer></script>
-    <title>Timcornels Chamber of Commerce</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <header class="header">
+    <header>
         <div class="container header-content">
-            <div class="logo">
-                <img src="images/global-buisness.svg" alt="Timcornels Chamber of Commerce Logo">
-                <h1>Timcornels <br>Chamber of Commerce</h1>
+            <div class="site-name">
+                <img src="images/chamber-logo.png" alt="Timcornels Chamber of Commerce Logo">
+                <h1>Timcornels Chamber of Commerce</h1>
             </div>
-            <nav class="main-nav">
-                <button class="hamburger-menu" aria-label="Toggle navigation">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="https://github.com/coyegoke" target="_blank">GitHub</a></li>
-                    <li><a href="#">Chamber</a></li>
-                    <li><a href="#">Final</a></li>
-                    <li><a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a></li>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html" class="active">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <h1>Timcornels Chamber of Commerce</h1>
-        <section class="hero">
-            <div class="container">
-                <img src="images/chamber-of-commerce.jpg" alt="Scalable Chamber of Commerce">
-                <button class="keynote-tickets">Keynote Tickets</button>
-            </div>
-        </section>
-
-        <section class="home-sections container">
-            <h2>Home</h2>
-            <div class="section-grid">
-                <div class="card events">
-                    <h3>Events</h3>
-                    <p>Details about upcoming events...</p>
-                </div>
-                <div class="card current-weather">
-                    <h3>Current Weather</h3>
-                    <div class="weather-details">
-                        <p class="temperature">75° F</p>
-                        <img src="images/weather.png" alt="Party Cloudy" class="weather-icon">
-                        <p>Party Cloudy</p>
-                        <p>High: 85°</p>
-                        <p>Low: 52°</p>
-                        <p>Humidity: 34%</p>
-                        <p>Sunrise: 7:30am</p>
-                        <p>Sunset: 9:59pm</p>
-                    </div>
-                </div>
-                <div class="card weather-forecast">
-                    <h3>Weather Forecast</h3>
-                    <p>Today: <strong>90°F</strong></p>
-                    <p>Wednesday: <strong>89°F</strong></p>
-                    <p>Thursday: <strong>68°F</strong></p>
-                </div>
-            </div>
-        </section>
-
-        <section class="business-listings container">
-            <div class="business-card">
-                <img src="images/connection-business.png" alt="Business Placeholder Image">
-                <h3>Business Name</h3>
-                <p class="tag-line">Business Tag Line</p>
-                <p>EMAIL: info@gmail.com</p>
-                <p>PHONE: 803-264-9013</p>
-                <p>URL: connectmybusiness.com</p>
-            </div>
-            <div class="business-card">
-                <img src="images/global-buisness.png" alt="Business Placeholder Image">
-                <h3>Business Name</h3>
-                <p class="tag-line">Business Tag Line</p>
-                <p>EMAIL: info@gmail.com</p>
-                <p>PHONE: 810-571-0950</p>
-                <p>URL: myglobalbusiness.com</p>
-            </div>
-            <div class="business-card">
-                <img src="images/lgistic-business.png" alt="Business Placeholder Image">
-                <h3>Business Name</h3>
-                <p class="tag-line">Business Tag Line</p>
-                <p>EMAIL: info@gmail.com</p>
-                <p>PHONE: 955-843-1762</p>
-                <p>URL: mybusinesslogistic.com</p>
-            </div>
-        </section>
+    <main class="container directory-page-content">
+        <h2>Our Members Directory</h2>
+        <div class="view-toggle-buttons">
+            <button id="grid-view-btn" class="active">Grid View</button>
+            <button id="list-view-btn">List View</button>
+        </div>
+        <div id="members-container" class="grid-view">
+        </div>
     </main>
 
-    <footer class="footer">
+    <footer>
         <div class="container footer-content">
-            <div class="footer-info">
-                <h4>Timcornels Chamber of Commerce</h4>
-                <p>28 Staff Quaters, Ife</p>
-                <p>Osun State, Nigeria 234</p>
-                <p>info@timcornelscc.org</p>
-                <p>(234) 8161-2699</p>
+            <div class="contact-info">
+                <h3>Timcornels Chamber of Commerce</h3>
+                <p>10 Rue De La Paix</p>
+                <p>Timbuktu, Mali 999</p>
+                <p>Email: <a href="mailto:info@timcornels.org">info@timcornels.org</a></p>
+                <p>Phone: (223) 555-2300</p>
             </div>
             <div class="social-media">
-                <a href="#" aria-label="YouTube"><img src="images/facebook.svg" alt="Facebook"></a>
-                <a href="#" aria-label="Twitter"><img src="images/twitter-x.svg" alt="Twitter"></a>
-                <a href="#" aria-label="WhatsApp"><img src="images/whatsapp.svg" alt="WhatsApp"></a>
-                <a href="#" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+                <a href="#" aria-label="Facebook"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" aria-label="Twitter"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" aria-label="LinkedIn"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
             </div>
-            <div class="footer-meta">
-                <p>WDD231 Class Project</p>
-                <p>Oyegoke Cornelius Oyetunji</p>
-                <p> &copy; <span id="currentyear"></span> Timcornels Chamber of Commerce</p>
-                <p>Last Modification: <span id="lastModified"></span></p>
+            <div class="development-info">
+                <p>&copy; <span id="copyright-year"></span> Timcornels Chamber of Commerce</p>
+                <p>Oyetunji Cornelius Oyegoke | WDD 231</p>
+                <p>Last Modification: <span id="last-modified"></span></p>
             </div>
         </div>
     </footer>
