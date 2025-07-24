@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // OpenWeatherMap API for Weather Data
-    const WEATHER_API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY'; // Replace with your actual API key
+    const WEATHER_API_KEY = '9f75919ceb4911138a4bcfe67b7a98f7';
     const CITY_NAME = 'Ile-Ife';
     const LAT = 16.7666;
     const LON = 3.0026;
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to fetch current weather
     const fetchCurrentWeather = async () => {
-        if (WEATHER_API_KEY === 'YOUR_OPENWEATHERMAP_API_KEY') {
+        if (WEATHER_API_KEY === '9f75919ceb4911138a4bcfe67b7a98f7') {
             console.warn('OpenWeatherMap API Key not set. Please replace "YOUR_OPENWEATHERMAP_API_KEY" with your actual key.');
             weatherDescriptionP.textContent = 'API Key Missing!';
             return;
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 memberCard.innerHTML = `
-                    <img src="images/${member.image}" alt="${member.name} Logo" class="business-logo" onerror="this.onerror=null;this.src='https://placehold.co/100x100/2c3e50/ffffff?text=Logo'">
+                    <img src="images/${member.image}" alt="${member.name} Logo" class="business-logo" onerror="this.onerror=null;this.src='images/business-favicon.ico'">
                     <h4>${member.name}</h4>
                     <p class="tag-line">${member.description || ''}</p>
                     <p>PHONE: ${member.phone}</p>
@@ -191,7 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Execute on page load
     fetchCurrentWeather();
     fetchWeatherForecast();
     loadSpotlights();
