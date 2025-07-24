@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to fetch current weather
     const fetchCurrentWeather = async () => {
         if (WEATHER_API_KEY === '9f75919ceb4911138a4bcfe67b7a98f7') {
-            console.warn('OpenWeatherMap API Key not set. Please replace "YOUR_OPENWEATHERMAP_API_KEY" with your actual key.');
+            console.warn('OpenWeatherMap API Key not set.');
             weatherDescriptionP.textContent = 'API Key Missing!';
             return;
         }
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.json();
             currentTempSpan.textContent = Math.round(data.main.temp);
             weatherDescriptionP.textContent = data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1); // Capitalize first letter
-            // OpenWeatherMap icon codes: https://openweathermap.org/weather-conditions#Weather-condition-codes-2
+            // OpenWeatherMap icon codes
             weatherIconImg.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
             weatherIconImg.alt = data.weather[0].description;
         } catch (error) {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to fetch 3-day forecast
     const fetchWeatherForecast = async () => {
-        if (WEATHER_API_KEY === 'YOUR_OPENWEATHERMAP_API_KEY') {
+        if (WEATHER_API_KEY === '9f75919ceb4911138a4bcfe67b7a98f7') {
             return;
         }
 
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const dailyForecasts = {};
             data.list.forEach(item => {
                 const date = new Date(item.dt * 1000);
-                const day = date.toDateString(); // e.g., "Mon Jul 23 2025"
+                const day = date.toDateString();
                 if (!dailyForecasts[day]) {
                     dailyForecasts[day] = {
                         temps: [],
