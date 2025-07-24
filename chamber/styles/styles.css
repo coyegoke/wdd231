@@ -146,7 +146,7 @@ main {
 }
 
 .call-to-action-btn {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     color: var(--text-color);
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -178,12 +178,12 @@ main {
 .events-section,
 .weather-section {
     background-color: var(--secondary-color);
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 .events-section h3,
 .weather-section h3 {
-    color: var(--accent-color);
+    color: var(--primary-color);
     margin-top: 0;
     border-bottom: 2px solid var(--accent-color);
     padding-bottom: 0.5rem;
@@ -200,9 +200,9 @@ main {
 }
 
 .read-more-btn {
-    color: var(--accent-color);
+    color: var(--secondary-color);
     text-decoration: none;
-    font-weight: 700;
+    font-size: 14px;
     display: inline-block;
     margin-top: 1rem;
 }
@@ -220,13 +220,12 @@ main {
 }
 
 .weather-section .weather-icon {
-    width: 60px;
+    width: 50px;
     height: auto;
 }
 
 .weather-section .temperature {
     font-size: 2.5rem;
-    font-weight: 700;
     margin: 0;
 }
 
@@ -237,7 +236,8 @@ main {
 }
 
 .weather-forecast h4 {
-    color: var(--accent-color);
+    font-size: 14px;
+    color: var(--secondary-color);
     margin-top: 0;
     margin-bottom: 0.8rem;
 }
@@ -298,13 +298,13 @@ main {
 }
 
 .business-card p {
-    color: var(--dark-text-color);
+    color: var(--primary-color);
     margin: 0.3rem 0;
     font-size: 0.95rem;
 }
 
 .business-card a {
-    color: var(--accent-color);
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
@@ -369,7 +369,7 @@ main {
 }
 
 .view-toggle-buttons button {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--text-color);
     border: none;
     padding: 0.7rem 1.2rem;
@@ -380,11 +380,11 @@ main {
 }
 
 .view-toggle-buttons button:hover {
-    background-color: darken(var(--secondary-color), 10%);
+    background-color: var(--secondary-color);
 }
 
 .view-toggle-buttons button.active {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     font-weight: bold;
 }
 
@@ -458,14 +458,14 @@ main {
 
 .member-card p,
 .member-list-item p {
-    color: var(--dark-text-color);
+    color: var(--primary-color);
     margin: 0.3rem 0;
     font-size: 0.95rem;
 }
 
 .member-card a,
 .member-list-item a {
-    color: var(--accent-color);
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
