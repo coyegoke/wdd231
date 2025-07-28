@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to fetch current weather
     const fetchCurrentWeather = async () => {
-        if (WEATHER_API_KEY === '9f75919ceb4911138a4bcfe67b7a98f7') {
+        if (!WEATHER_API_KEY) {
             console.warn('OpenWeatherMap API Key not set.');
             weatherDescriptionP.textContent = 'API Key Missing!';
             return;
@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=${UNITS}&appid=${WEATHER_API_KEY}`;
 
         try {
-            const response = await fetch(currentWeatherUrl);
+            const response = await fetch(currentWeatherUrl
+            );
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -64,7 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to fetch 3-day forecast
     const fetchWeatherForecast = async () => {
-        if (WEATHER_API_KEY === '9f75919ceb4911138a4bcfe67b7a98f7') {
+         if (!WEATHER_API_KEY) {
+            console.warn('OpenWeatherMap API Key not set.');
+            weatherDescriptionP.textContent = 'API Key Missing!';
             return;
         }
 
@@ -94,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Get the next 3 unique days starting from tomorrow
             const today = new Date();
             today.setHours(0, 0, 0, 0); // Reset time to compare dates only
+            console.log('Daily Forecasts:', dailyForecasts);
             const forecastDaysArray = Object.values(dailyForecasts)
                 .filter(dayData => dayData.date.getTime() > today.getTime()) // Filter out today's entries
                 .sort((a, b) => a.date - b.date) // Sort by date
@@ -101,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (forecastDaysArray.length > 0) {
                 forecastDay1TempP.textContent = `${Math.round(Math.min(...forecastDaysArray[0].temps))}°F / ${Math.round(Math.max(...forecastDaysArray[0].temps))}°F`;
+                
             } else {
                 forecastDay1TempP.textContent = '--';
             }
