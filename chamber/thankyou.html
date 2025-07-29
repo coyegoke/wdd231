@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! - Timcornels Chamber of Commerce</title>
+    <meta name="description" content="Thank you for your application to the Timcornels Chamber of Commerce.">
+    <meta name="author" content="Oyetunji Cornelius Oyegoke">
+    <link rel="icon" href="favicon.ico" type="image/icon">
+    <meta property="og:title" content="Thank You for Joining!">
+    <meta property="og:description" content="Your application to the Timcornels Chamber of Commerce has been received.">
+    <meta property="og:image" content="http://www.timcornelschamber.org/images/chamber-logo-social.jpg">
+    <meta property="og:url" content="http://www.timcornelschamber.org/thankyou.html">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/thankyou.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="site-name">
+                <img src="images/timcornels-logo.png" alt="Timcornels Chamber of Commerce Logo">
+                <h1>Timcornels Chamber of Commerce</h1>
+            </div>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container thankyou-page-content">
+        <section class="thankyou-message-card">
+            <h2>Thank You for Your Application!</h2>
+            <p>Your application to the Timcornels Chamber of Commerce has been successfully submitted. We appreciate
+                your interest in joining our community.</p>
+            <p>A confirmation email with further details will be sent to you shortly.</p>
+            <p>Here is a summary of the information you provided:</p>
+
+            <div class="submitted-info">
+                <p><strong>Applicant Name:</strong> <span id="display-name"></span></p>
+                <p><strong>Email:</strong> <span id="display-email"></span></p>
+                <p><strong>Mobile Phone:</strong> <span id="display-phone"></span></p>
+                <p><strong>Business/Organization Name:</strong> <span id="display-business-name"></span></p>
+                <p><strong>Application Timestamp:</strong> <span id="display-timestamp"></span></p>
+            </div>
+
+            <a href="index.html" class="btn-primary back-to-home-btn">Back to Home</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="contact-info">
+                <h3>Timcornels Chamber of Commerce</h3>
+                <p>10 Senior Staff Quarters, Ile-Ife</p>
+                <p>Osun State, Nigeria</p>
+                <p>Email: <a href="mailto:info@tim.org">info@timcornels.org</a></p>
+                <p>Phone: (224) 1111-234699</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/" aria-label="Facebook"><img src="images/facebook.svg"
+                        alt="Facebook"></a>
+                <a href="https://twitter.com/" aria-label="Twitter"><img src="images/twitter-x.svg" alt="Twitter"></a>
+                <a href="https://www.linkedin.com/in/oyetunji-cornelius-oyegoke-923540368" aria-label="LinkedIn"><img
+                        src="images/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="copyright-year"></span> Timcornels Chamber of Commerce</p>
+                <p>Oyetunji Cornelius Oyegoke | WDD 231</p>
+                <p>Last Modification: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

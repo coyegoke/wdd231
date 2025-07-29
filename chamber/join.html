@@ -8,20 +8,15 @@
     <meta name="description"
         content="Join the Timcornels Chamber of Commerce and access valuable resources, networking opportunities, and marketing support for your business in Ife.">
     <meta name="author" content="Oyetunji Cornelius Oyegoke">
-
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- Facebook Open Graph Meta Tags -->
+    <link rel="icon" href="favicon.ico" type="image/icon">
     <meta property="og:title" content="Join the Timcornels Chamber of Commerce">
     <meta property="og:description"
         content="Become a member of the Timcornels Chamber of Commerce and boost your business in Ife with exclusive benefits and networking.">
     <meta property="og:image" content="http://www.timcornelschamber.org/images/chamber-logo-social.jpg">
-    <!-- Placeholder image URL -->
-    <meta property="og:url" content="http://www.timcornelschamber.org/join.html"> <!-- Placeholder URL -->
+    <meta property="og:url" content="http://www.timcornelschamber.org/join.html">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/join.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
@@ -31,7 +26,7 @@
     <header>
         <div class="container header-content">
             <div class="site-name">
-                <img src="images/chamber-logo.png" alt="Timcornels Chamber of Commerce Logo"> <!-- Placeholder Logo -->
+                <img src="images/timcornels-logo.png" alt="Timcornels Chamber of Commerce Logo">
                 <h1>Timcornels Chamber of Commerce</h1>
             </div>
             <nav>
@@ -52,93 +47,110 @@
             local businesses and provides valuable resources to help your business thrive. Choose the membership level
             that best suits your needs:</p>
 
-        <section class="membership-levels">
-            <div class="membership-card">
-                <h3>Non-Profit Membership</h3>
-                <p class="price">Free for eligible non-profits</p>
-                <ul>
-                    <li>Basic Directory Listing</li>
-                    <li>Access to general workshops</li>
-                    <li>Community engagement opportunities</li>
-                </ul>
-                <button class="join-btn">Apply Now</button>
-            </div>
+        <div class="join-layout-container">
+            <section class="membership-application-form">
+                <h3>Membership Application Form</h3>
+                <form action="thankyou.html" method="get">
+                    <div class="form-group">
+                        <label for="firstName" title="Applicant's first name"><strong>First Name: </strong><input
+                                type="text" id="firstName" name="firstName" required autocomplete="given-name"
+                                placeholder="Enter Your First Name"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" title="Applicant's last name"><strong>Last Name: </strong><input
+                                type="text" id="lastName" name="lastName" required autocomplete="family-name"
+                                placeholder="Enter Your Last Name"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="orgTitle" title="Your organizational title"><strong> Organization Title:
+                            </strong><input type="text" id="orgTitle" name="orgTitle" autocomplete="organization-title"
+                                pattern="[A-Za-z\s-]{7,}" title="Minimum 7 alpha characters, hyphens, or spaces"
+                                placeholder="Enter Your Organization Title"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" title="Your email address"> <strong>Email: </strong><input type="email"
+                                id="email" name="email" required autocomplete="email"
+                                placeholder="example@domain.com"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobilePhone" title="Your mobile phone number"> <strong>Mobile Phone: </strong><input
+                                type="tel" id="mobilePhone" name="mobilePhone" required autocomplete="tel"
+                                placeholder="Enter Your Mobile Number"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="businessName" title="Your business or organization's name">
+                            <strong>Business/Organization
+                                Name: </strong><input type="text" id="businessName" name="businessName" required
+                                autocomplete="organization" placeholder="Enter Your Business Name"></label>
+                    </div>
 
-            <div class="membership-card">
-                <h3>Silver Membership</h3>
-                <p class="price">$50/month</p>
-                <ul>
-                    <li>Enhanced Directory Listing</li>
-                    <li>Access to all workshops and trainings</li>
-                    <li>Social media mentions</li>
-                    <li>Invitations to exclusive luncheons</li>
-                    <li>Networking event discounts</li>
-                </ul>
-                <button class="join-btn">Apply Now</button>
-            </div>
+                    <div class="form-group">
+                        <label for="membershipLevel" title="Select your desired membership level"><strong> Membership
+                                Level: </strong></label>
+                        <select id="membershipLevel" name="membershipLevel" required>
+                            <option value="">Select a Level</option>
+                            <option value="NP Membership">NP Membership (Non-Profit - No Fee)</option>
+                            <option value="Bronze Membership">Bronze Membership</option>
+                            <option value="Silver Membership">Silver Membership</option>
+                            <option value="Gold Membership">Gold Membership</option>
+                        </select>
+                    </div>
 
-            <div class="membership-card">
-                <h3>Gold Membership</h3>
-                <p class="price">$150/month</p>
-                <ul>
-                    <li>Premium Directory Listing (featured)</li>
-                    <li>All Silver benefits included</li>
-                    <li>Monthly business spotlight in newsletter</li>
-                    <li>Priority for sponsorship opportunities</li>
-                    <li>Dedicated advertising space on website</li>
-                    <li>One-on-one business consultation</li>
-                </ul>
-                <button class="join-btn">Apply Now</button>
-            </div>
-        </section>
+                    <div class="form-group">
+                        <label for="businessDescription" title="Describe your business/organization">
+                            <strong>Business/Organization Description: </strong><textarea id="businessDescription"
+                                name="businessDescription" rows="5"></textarea></label>
+                    </div>
 
-        <section class="membership-application-form">
-            <h3>Membership Application Form</h3>
-            <form action="#" method="post">
-                <label for="name">Business Name:</label>
-                <input type="text" id="name" name="business_name" required>
+                    <input type="hidden" id="timestamp" name="timestamp">
 
-                <label for="contact-person">Contact Person:</label>
-                <input type="text" id="contact-person" name="contact_person" required>
+                    <input type="submit" value="Join the Chamber" class="submit-form-btn">
+                </form>
+            </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <section class="membership-levels">
+                <div class="membership-card animated-card" data-card-id="np">
+                    <h3>NP Membership</h3>
+                    <p class="price">No Fee</p>
+                    <button class="learn-more-btn" data-modal-target="np-modal">Learn More</button>
+                </div>
 
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
+                <div class="membership-card animated-card" data-card-id="bronze">
+                    <h3>Bronze Membership</h3>
+                    <p class="price">Starting at $25/month</p>
+                    <button class="learn-more-btn" data-modal-target="bronze-modal">Learn More</button>
+                </div>
 
-                <label for="address">Business Address:</label>
-                <textarea id="address" name="address" rows="3" required></textarea>
+                <div class="membership-card animated-card" data-card-id="silver">
+                    <h3>Silver Membership</h3>
+                    <p class="price">Starting at $50/month</p>
+                    <button class="learn-more-btn" data-modal-target="silver-modal">Learn More</button>
+                </div>
 
-                <label for="membership-level">Desired Membership Level:</label>
-                <select id="membership-level" name="membership_level" required>
-                    <option value="">--Select a level--</option>
-                    <option value="non-profit">Non-Profit</option>
-                    <option value="silver">Silver</option>
-                    <option value="gold">Gold</option>
-                </select>
-
-                <label for="reason">Why do you want to join the Chamber?</label>
-                <textarea id="reason" name="reason" rows="5"></textarea>
-
-                <button type="submit" class="submit-form-btn">Submit Application</button>
-            </form>
-        </section>
+                <div class="membership-card animated-card" data-card-id="gold">
+                    <h3>Gold Membership</h3>
+                    <p class="price">Starting at $150/month</p>
+                    <button class="learn-more-btn" data-modal-target="gold-modal">Learn More</button>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
         <div class="container footer-content">
             <div class="contact-info">
                 <h3>Timcornels Chamber of Commerce</h3>
-                <p>10 Rue De La Paix</p>
-                <p>Timbuktu, Mali 999</p>
-                <p>Email: <a href="mailto:info@timcornels.org">info@timcornels.org</a></p>
-                <p>Phone: (223) 555-2300</p>
+                <p>10 Senior Staff Quarters, Ile-Ife</p>
+                <p>Osun State, Nigeria</p>
+                <p>Email: <a href="mailto:info@tim.org">info@timcornels.org</a></p>
+                <p>Phone: (224) 1111-234699</p>
             </div>
             <div class="social-media">
-                <a href="#" aria-label="Facebook"><img src="images/facebook-icon.png" alt="Facebook"></a>
-                <a href="#" aria-label="Twitter"><img src="images/twitter-icon.png" alt="Twitter"></a>
-                <a href="#" aria-label="LinkedIn"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="https://www.facebook.com/" aria-label="Facebook"><img src="images/facebook.svg"
+                        alt="Facebook"></a>
+                <a href="https://twitter.com/" aria-label="Twitter"><img src="images/twitter-x.svg" alt="Twitter"></a>
+                <a href="https://www.linkedin.com/in/oyetunji-cornelius-oyegoke-923540368" aria-label="LinkedIn"><img
+                        src="images/linkedin.svg" alt="LinkedIn"></a>
             </div>
             <div class="development-info">
                 <p>&copy; <span id="copyright-year"></span> Timcornels Chamber of Commerce</p>
@@ -148,6 +160,69 @@
         </div>
     </footer>
 
+    <!-- Modals for Membership Benefits -->
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>NP Membership Benefits</h3>
+            <p>Designed for non-profit organizations committed to community service.</p>
+            <ul>
+                <li>Basic Directory Listing</li>
+                <li>Access to General Workshops & Webinars</li>
+                <li>Community Engagement Opportunities</li>
+                <li>Networking Events (Standard Access)</li>
+                <li>Chamber Newsletter Subscription</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Bronze Membership Benefits</h3>
+            <p>Ideal for new businesses looking to establish a local presence.</p>
+            <ul>
+                <li>All NP Membership Benefits</li>
+                <li>Enhanced Directory Listing</li>
+                <li>Member-Exclusive Discounts on Chamber Events</li>
+                <li>Basic Business Resources & Templates</li>
+                <li>Opportunity to Host Small Networking Events</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Silver Membership Benefits</h3>
+            <p>Perfect for growing businesses seeking increased visibility and support.</p>
+            <ul>
+                <li>All Bronze Membership Benefits</li>
+                <li>Priority Listing in Directory</li>
+                <li>Access to Advanced Training & Workshops</li>
+                <li>Social Media Mentions & Promotion (Quarterly)</li>
+                <li>Invitations to Exclusive Luncheons & Receptions</li>
+                <li>Discounted Advertising Rates in Chamber Publications</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Gold Membership Benefits</h3>
+            <p>Our premium tier for established businesses aiming for maximum impact and leadership.</p>
+            <ul>
+                <li>All Silver Membership Benefits</li>
+                <li>Featured Spotlight Position on Homepage (Monthly Rotation)</li>
+                <li>Priority for Sponsorship Opportunities at Major Events</li>
+                <li>Dedicated Business Consultation (Annual)</li>
+                <li>Premium Advertising Placement in Chamber Newsletter & Website</li>
+                <li>Exclusive Invitation to Board Meetings & Leadership Roundtables</li>
+                <li>Personalized Business Referrals</li>
+            </ul>
+        </div>
+    </div>
 </body>
 
 </html>
