@@ -1,3 +1,5 @@
+/* style.css */
+
 :root {
     --primary-color: #000000;
     --secondary-color: #2c3e50;
@@ -24,6 +26,26 @@ body {
     padding: 1rem;
 }
 
+/* Global Button Styles (for thankyou page) */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* Header Styles */
 header {
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -43,11 +65,12 @@ header {
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
+    /* For mobile stacking */
 }
 
 .site-name img {
     height: 50px;
-    width: 50px;
+    width: auto;
 }
 
 .site-name h1 {
@@ -58,6 +81,7 @@ header {
 
 nav .menu-toggle {
     display: block;
+    /* Show hamburger on mobile */
     background: none;
     border: none;
     color: var(--text-color);
@@ -71,13 +95,16 @@ nav .menu-toggle {
     margin: 0;
     padding: 0;
     display: none;
+    /* Hidden by default on mobile */
     flex-direction: column;
     width: 100%;
+    /* Take full width when open */
     text-align: center;
 }
 
 .nav-menu.active {
     display: flex;
+    /* Show when active */
 }
 
 .nav-menu li {
@@ -155,7 +182,7 @@ main {
 }
 
 .call-to-action-btn:hover {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
 }
 
 .home-grid-section {
@@ -182,7 +209,7 @@ main {
 
 .events-section h3,
 .weather-section h3 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-top: 0;
     border-bottom: 2px solid var(--accent-color);
     padding-bottom: 0.5rem;
@@ -219,12 +246,12 @@ main {
 }
 
 .weather-section .weather-icon {
-    width: 50px;
+    width: 60px;
     height: auto;
 }
 
 .weather-section .temperature {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 0;
 }
 
@@ -235,10 +262,10 @@ main {
 }
 
 .weather-forecast h4 {
-    font-size: 14px;
     color: var(--secondary-color);
     margin-top: 0;
     margin-bottom: 0.8rem;
+    font-size: 14px;
 }
 
 .weather-forecast #forecast-days p {
@@ -269,6 +296,8 @@ main {
     padding: 1.5rem;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    color: var(--secondary-color);
+    /* Reverted text to dark */
 }
 
 .business-card .business-logo {
@@ -378,7 +407,7 @@ main {
 }
 
 .view-toggle-buttons button:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
 }
 
 .view-toggle-buttons button.active {
@@ -386,7 +415,7 @@ main {
     font-weight: bold;
 }
 
-/* Styles for the main display container (#members-container) */
+/* Styles for the main display container */
 #members-container.grid-view {
     display: grid;
     grid-template-columns: 1fr;
@@ -403,7 +432,7 @@ main {
 .member-card,
 .member-list-item {
     background-color: #fff;
-    color: var(--dark-text-color);
+    color: var(--primary-color);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1.5rem;
@@ -415,7 +444,6 @@ main {
 }
 
 .member-list-item {
-    /* Used when #members-container has .list-view */
     background-color: #fff;
     color: var(--dark-text-color);
     padding: 1rem 1.5rem;
@@ -490,7 +518,7 @@ main {
     margin-top: 0.5rem;
 }
 
-/* Join Page Specific Styles */
+/* Join Page Specific Styles  */
 .join-page-content h2 {
     text-align: center;
     color: var(--primary-color);
@@ -501,72 +529,13 @@ main {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 1.1rem;
-    color: #555;
+    color: var(--secondary-color);
 }
 
-.membership-levels {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.membership-card {
-    background-color: #fff;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+.join-layout-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.membership-card h3 {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-.membership-card .price {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
-.membership-card ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
-    /* Make list take available space */
-}
-
-.membership-card ul li::before {
-    content: '✓';
-    color: var(--accent-color);
-    position: absolute;
-    left: 0;
-}
-
-.join-btn {
-    background-color: var(--accent-color);
-    color: var(--text-color);
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    width: 100%;
-}
-
-.join-btn:hover {
-    background-color: darken(var(--accent-color), 10%);
+    gap: 2rem;
 }
 
 .membership-application-form {
@@ -582,7 +551,7 @@ main {
     text-align: center;
     margin-top: 0;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--accent-color);
     padding-bottom: 1rem;
 }
 
@@ -591,27 +560,32 @@ main {
     flex-direction: column;
 }
 
-.membership-application-form label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: var(--secondary-color);
+.form-group {
+    margin-bottom: 1rem;
 }
 
-.membership-application-form input[type="text"],
-.membership-application-form input[type="email"],
-.membership-application-form input[type="tel"],
-.membership-application-form textarea,
-.membership-application-form select {
+.form-group label {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    display: block;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select {
     padding: 0.8rem;
-    margin-bottom: 1rem;
     border: 1px solid var(--border-color);
     border-radius: 5px;
     font-size: 1rem;
-    width: calc(100% - 1.6rem);
+    width: 100%;
+    max-width: 100%;
 }
 
-.membership-application-form textarea {
+.form-group textarea {
     resize: vertical;
+    min-height: 100px;
 }
 
 .submit-form-btn {
@@ -624,12 +598,216 @@ main {
     font-size: 1.1rem;
     transition: background-color 0.3s ease;
     margin-top: 1rem;
+    width: auto;
+    align-self: flex-start;
 }
 
 .submit-form-btn:hover {
     background-color: var(--secondary-color);
 }
 
+.membership-levels {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.membership-card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.membership-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.membership-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.membership-card .price {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.membership-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.membership-card ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.membership-card ul li::before {
+    content: '✓';
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+.learn-more-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.learn-more-btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--light-bg);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.modal-content ul li {
+    margin-bottom: 8px;
+}
+
+.close-button {
+    color: var(--secondary-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Thank You Page Specific Styles */
+.thankyou-page-content {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.thankyou-message-card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+.thankyou-message-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.thankyou-message-card p {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.submitted-info {
+    background-color: var(--light-bg);
+    border: 1px dashed var(--border-color);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.submitted-info p {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.submitted-info strong {
+    color: var(--primary-color);
+}
+
+.back-to-home-btn {
+    margin-top: 1.5rem;
+}
+
+
+/* Footer Styles */
 footer {
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -675,7 +853,9 @@ footer {
     width: 30px;
     height: 30px;
     transition: transform 0.3s ease;
+    /* Styles to make icons white */
     filter: brightness(0) invert(1);
+    /* This turns the image white */
 }
 
 .social-media img:hover {
@@ -690,7 +870,8 @@ footer {
     width: 100%;
 }
 
-/* Tablets and larger (768px and up) */
+/* Responsive Styles */
+/* Tablets and larger */
 @media (min-width: 768px) {
     .header-content {
         flex-wrap: nowrap;
@@ -707,6 +888,7 @@ footer {
 
     .nav-menu {
         display: flex;
+        /* Always show navigation on larger screens */
         flex-direction: row;
         width: auto;
     }
@@ -734,7 +916,6 @@ footer {
 
     /* Directory page: List view on larger screens */
     #members-container.list-view {
-        /* Ensure it remains a single column layout for the list */
         grid-template-columns: 1fr;
         display: grid;
     }
@@ -786,9 +967,28 @@ footer {
         padding-top: 0;
         width: auto;
     }
+
+    /* Join Page Specific Media Queries */
+    .join-layout-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .membership-application-form {
+        flex: 2;
+    }
+
+    .membership-levels {
+        flex: 1;
+        /* Cards take less space */
+        grid-template-columns: 1fr;
+        /* Still single column within its flex container */
+        gap: 1rem;
+        /* Adjust gap for side-by-side */
+    }
 }
 
-/* Desktops and larger (1024px and up) */
+/* Desktops and larger */
 @media (min-width: 1024px) {
     .site-name h1 {
         font-size: 2rem;
@@ -820,9 +1020,17 @@ footer {
 
     #members-container.grid-view {
         grid-template-columns: repeat(3, 1fr);
+        /* 3 columns for grid view */
     }
 
     .business-spotlights .spotlight-cards {
         grid-template-columns: repeat(3, 1fr);
+        /* 3 columns for business spotlights on desktop */
+    }
+
+    /* Join Page Specific Media Queries */
+    .membership-levels {
+        grid-template-columns: 1fr;
+        /* Still single column within its flex container */
     }
 }
