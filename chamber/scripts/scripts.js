@@ -1,9 +1,14 @@
+// js/script.js - Specific logic for the directory.html page, including global functions
+
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Global Functionality (Moved from main.js) ---
+    // Dynamically set copyright year
     const copyrightYearSpan = document.getElementById('copyright-year');
     if (copyrightYearSpan) {
         copyrightYearSpan.textContent = new Date().getFullYear();
     }
 
+    // Dynamically set last modification date
     const lastModifiedSpan = document.getElementById('last-modified');
     if (lastModifiedSpan) {
         lastModifiedSpan.textContent = document.lastModified;
@@ -19,11 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Directory Page Specific Logic
+    // --- Directory Page Specific Logic ---
     // Get references to the view toggle buttons and the display container
     const gridbutton = document.querySelector("#grid-view-btn");
     const listbutton = document.querySelector("#list-view-btn");
-    const display = document.querySelector("#members-container");
+    const display = document.querySelector("#members-container"); // This is our 'article' equivalent
 
     let membersData = []; // Store fetched members data globally for easy access
 
@@ -35,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            membersData = data.members; 
+            membersData = data.members; // Store the fetched members array
             // Determine initial view based on active button
             if (gridbutton.classList.contains('active')) {
                 displayMembers(membersData, 'grid');
@@ -51,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to display members based on the view type (grid or list)
     const displayMembers = (members, viewType) => {
         display.innerHTML = ''; // Clear existing content
-        display.classList.remove("grid-view", "list-view");
+        display.classList.remove("grid-view", "list-view"); // Remove existing view classes
         display.classList.add(viewType === 'grid' ? "grid-view" : "list-view"); // Add the new view class
 
         members.forEach(member => {
@@ -70,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             memberElement.innerHTML = `
-                <img src="images/${member.image}" alt="${member.name} Logo" onerror="this.onerror=null;this.src='images/business-favicon.ico'">
+                <img src="images/${member.image}" alt="${member.name} Logo" onerror="this.onerror=null;this.src='https://placehold.co/100x100/e67e22/ffffff?text=Logo'">
                 <div class="member-details">
                     <h3>${member.name}</h3>
                     <p>${member.address}</p>

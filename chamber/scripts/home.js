@@ -1,10 +1,12 @@
+// js/home.js - Specific logic for the index.html page, including global functions
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Footer Content (Copyright Year & Last Modified Date)
     const copyrightYearSpan = document.getElementById('copyright-year');
     if (copyrightYearSpan) {
         copyrightYearSpan.textContent = new Date().getFullYear();
     }
 
+    // Dynamically set last modification date
     const lastModifiedSpan = document.getElementById('last-modified');
     if (lastModifiedSpan) {
         lastModifiedSpan.textContent = document.lastModified;
@@ -20,12 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // OpenWeatherMap API for Weather Data
+    // --- OpenWeatherMap API for Weather Data ---
     const WEATHER_API_KEY = '9f75919ceb4911138a4bcfe67b7a98f7';
-    const CITY_NAME = 'Ile-Ife';
-    const LAT = 16.7666;
-    const LON = 3.0026;
-    const UNITS = 'imperial';
+    const CITY_NAME = 'Ile-fe';
+    const LAT = 16.7666; // Latitude for Timbuktu
+    const LON = 3.0026;  // Longitude for Timbuktu
+    const UNITS = 'imperial'; // For Fahrenheit
 
     const currentTempSpan = document.getElementById('current-temp');
     const weatherDescriptionP = document.getElementById('weather-description');
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to fetch current weather
     const fetchCurrentWeather = async () => {
-        if (!WEATHER_API_KEY) {
+         if (!WEATHER_API_KEY) {
             console.warn('OpenWeatherMap API Key not set.');
             weatherDescriptionP.textContent = 'API Key Missing!';
             return;
@@ -45,15 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=${UNITS}&appid=${WEATHER_API_KEY}`;
 
         try {
-            const response = await fetch(currentWeatherUrl
-            );
+            const response = await fetch(currentWeatherUrl);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
             currentTempSpan.textContent = Math.round(data.main.temp);
-            weatherDescriptionP.textContent = data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1); // Capitalize first letter
-            // OpenWeatherMap icon codes
+            weatherDescriptionP.textContent = data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1);
             weatherIconImg.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
             weatherIconImg.alt = data.weather[0].description;
         } catch (error) {
@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (forecastDaysArray.length > 0) {
                 forecastDay1TempP.textContent = `${Math.round(Math.min(...forecastDaysArray[0].temps))}°F / ${Math.round(Math.max(...forecastDaysArray[0].temps))}°F`;
-                
             } else {
                 forecastDay1TempP.textContent = '--';
             }
@@ -128,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Business Spotlights
+    // --- Business Spotlights ---
     const spotlightContainer = document.getElementById('spotlight-cards-container');
 
     // Fisher-Yates (Knuth) Shuffle algorithm
@@ -179,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 memberCard.innerHTML = `
-                    <img src="images/${member.image}" alt="${member.name} Logo" class="business-logo" onerror="this.onerror=null;this.src='images/business-favicon.ico'">
+                    <img src="images/${member.image}" alt="${member.name} Logo" class="business-logo" onerror="this.onerror=null;this.src='https://placehold.co/100x100/2c3e50/ffffff?text=Logo'">
                     <h4>${member.name}</h4>
                     <p class="tag-line">${member.description || ''}</p>
                     <p>PHONE: ${member.phone}</p>
