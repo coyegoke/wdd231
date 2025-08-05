@@ -346,32 +346,122 @@ main {
     margin-bottom: 2rem;
 }
 
-.section-card {
+/* Discover Grid Layout using grid-template-areas */
+.discover-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Default single column for small screens */
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    /* Define grid areas for small screens */
+    grid-template-areas:
+        "history"
+        "demographics"
+        "events"
+        "gallery"
+        "sidebar"
+        "items-of-interest";
+}
+
+.discover-history {
+    grid-area: history;
+}
+
+.discover-demographics {
+    grid-area: demographics;
+}
+
+.discover-events {
+    grid-area: events;
+}
+
+.discover-gallery {
+    grid-area: gallery;
+}
+
+.discover-sidebar {
+    grid-area: sidebar;
+}
+
+.discover-items-of-interest {
+    grid-area: items-of-interest;
+}
+
+
+/* Styling for the new "Items of Interest" cards */
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Single column on mobile within its area */
+    gap: 1.5rem;
+}
+
+.interest-card {
     background-color: #fff;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.section-card h3 {
+.interest-card h2 {
+    font-size: 1.3rem;
     color: var(--secondary-color);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.5rem;
-    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.interest-card figure {
+    margin: 0;
+    padding: 0;
     margin-bottom: 1rem;
 }
 
-.section-card ul {
-    list-style: disc;
-    margin-left: 20px;
+.interest-card figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
+.interest-card address {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.interest-card p {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.interest-card .learn-more-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.interest-card .learn-more-btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* Image gallery hover effect (only for non-mobile) */
 .image-montage .gallery {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
+    /* This line adds space between images */
     margin-top: 1rem;
 }
 
@@ -380,6 +470,8 @@ main {
     height: auto;
     border-radius: 5px;
     object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Add transition */
 }
 
 
@@ -518,7 +610,7 @@ main {
     margin-top: 0.5rem;
 }
 
-/* Join Page Specific Styles  */
+/* Join Page Specific Styles  */
 .join-page-content h2 {
     text-align: center;
     color: var(--primary-color);
@@ -905,9 +997,34 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
-    .image-montage .gallery {
-        grid-template-columns: repeat(2, 1fr);
+    /* Discover Page Grid Layout for Medium Screens */
+    .discover-grid-layout {
+        grid-template-columns: 1fr 1fr;
+        /* Two columns */
+        grid-template-areas:
+            "history demographics"
+            "events gallery"
+            "items-of-interest items-of-interest"
+            /* Spans two columns */
+            "sidebar sidebar";
+        /* Spans two columns */
     }
+
+    .items-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns for items of interest */
+        justify-content: center;
+        /* Center the grid items horizontally */
+    }
+
+    /* Image gallery hover effect for non-mobile */
+    .image-montage .gallery img:hover {
+        transform: scale(1.05);
+        /* Zoom effect */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        /* Add shadow */
+    }
+
 
     /* Directory page: Grid view on larger screens */
     #members-container.grid-view {
@@ -1014,8 +1131,23 @@ footer {
         /* Weather takes 1 column in this 2-column layout */
     }
 
+    /* Discover Page Grid Layout for Large Screens */
+    .discover-grid-layout {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "history demographics sidebar"
+            "events gallery items-of-interest"
+            "items-of-interest items-of-interest items-of-interest";
+        /* Spans three columns */
+    }
+
+    .items-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
     .image-montage .gallery {
         grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
     }
 
     #members-container.grid-view {
