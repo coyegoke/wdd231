@@ -8,20 +8,18 @@
     <meta name="description"
         content="Discover the history, demographics, and current events of Ife and its surrounding areas, presented by the Timcornels Chamber of Commerce.">
     <meta name="author" content="Oyetunji Cornelius Oyegoke">
-
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- Facebook Open Graph Meta Tags -->
     <meta property="og:title" content="Discover Ife with Timcornels Chamber of Commerce">
     <meta property="og:description"
         content="Learn about the local history, demographics, and exciting events in Ife through the Timcornels Chamber of Commerce.">
+    <link rel="icon" href="favicon.ico" type="image/icon">
+    <meta property="og:title" content="Timcornels Chamber of Commerce - Timbuktu">
+    <meta property="og:description"
+        content="Your resource hub for businesses in Timbuktu, promoting local economic growth, networking, and community support.">
     <meta property="og:image" content="http://www.timcornelschamber.org/images/chamber-logo-social.jpg">
-    <!-- Placeholder image URL -->
-    <meta property="og:url" content="http://www.timcornelschamber.org/discover.html"> <!-- Placeholder URL -->
+    <meta property="og:url" content="http://www.timcornelschamber.org/discover.html">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
@@ -31,7 +29,7 @@
     <header>
         <div class="container header-content">
             <div class="site-name">
-                <img src="images/chamber-logo.png" alt="Timcornels Chamber of Commerce Logo"> <!-- Placeholder Logo -->
+                <img src="images/timcornels-logo.png" alt="Timcornels Chamber of Commerce Logo">
                 <h1>Timcornels Chamber of Commerce</h1>
             </div>
             <nav>
@@ -48,59 +46,94 @@
 
     <main class="container discover-page-content">
         <h2>Discover Ife</h2>
-        <section class="section-card">
-            <h3>Our History</h3>
-            <p>Ife boasts a rich history, dating back centuries as a significant cultural and spiritual center. Its
-                vibrant past has shaped its present, creating a community deeply rooted in tradition while embracing
-                progress. Discover the tales of ancient kingdoms and the evolution of our beloved city.</p>
-        </section>
 
-        <section class="section-card">
-            <h3>Demographics</h3>
-            <p>The city of Ife is a melting pot of cultures and ages, with a diverse population contributing to its
-                dynamic atmosphere. Our community is characterized by a strong workforce, a growing number of young
-                families, and a welcoming environment for newcomers. Detailed demographic data is available upon
-                request.</p>
-        </section>
+        <div class="discover-grid-layout">
+            <section class="section-card discover-history">
+                <h3>Our History</h3>
+                <p>In Yoruba mythology, Olodumare instructed Obatala to create the earth, but he became drunk on palm
+                    wine. Oduduwa then took over the task, descended from the heavens, and formed land by dropping earth
+                    on the ocean, creating a mound called Oke Ora.<br>
+                    <br>He placed a five-toed cockerel on it to spread the
+                    soil and planted a palm nut, from which a tree with sixteen branches grew, symbolizing the founding
+                    clans of Ile Ife. This act sparked a lasting rivalry between Oduduwa and Obatala, still reflected in
+                    the Itapa festival today.<br>
+                    <br>Oduduwa is honored as the ancestor of Yoruba kings, while Obatala is
+                    credited with creating the first humans. “Ile Ife” means “The Home of Expansion”.
 
-        <section class="section-card">
-            <h3>Current Events</h3>
-            <p>Ife is always buzzing with activity! From local festivals and art exhibitions to business workshops and
-                community gatherings, there's always something happening. Check our events calendar regularly for the
-                latest updates and opportunities to engage with our vibrant community.</p>
-            <ul>
-                <li>Ife Annual Business Summit - August 15-17, 2025</li>
-                <li>Local Artisans Market - Every Saturday at Central Square</li>
-                <li>Community Clean-Up Day - September 10, 2025</li>
-            </ul>
-        </section>
+                </p>
+            </section>
 
-        <section class="section-card image-montage">
-            <h3>Explore Ife</h3>
-            <div class="gallery">
-                <img src="images/ife-landmark1.jpg" alt="Historic landmark in Ife">
-                <img src="images/ife-market.jpg" alt="Bustling local market in Ife">
-                <img src="images/ife-nature.jpg" alt="Natural scenery near Ife">
-                <img src="images/ife-cityscape.jpg" alt="Cityscape of Ife">
-            </div>
-            <p>Experience the beauty and diversity of Ife through these captivating images. From historical landmarks to
-                vibrant markets and serene natural landscapes, Ife offers a unique blend of experiences.</p>
-        </section>
+            <section class="section-card discover-demographics">
+                <h3>Demographics</h3>
+                <p>Ilé-Ifẹ̀, also known as Ifẹ̀, is an ancient Yoruba city located in southwestern Nigeria, within Osun
+                    State, approximately 218 kilometers northeast of Lagos.<br>
+                    <br>Believed to have been founded between 1000BC and 500 BC, it became a major cultural and
+                    religious center by 900 AD and is considered the
+                    spiritual heart of the Yoruba civilization. According to the 2006 census, Ilé-Ifẹ̀ has a population
+                    of over 500,000, making it the most populous city in Osun State.<br>
+                    <br>The current Ọọ̀ni of Ifẹ̀, Oba Adeyeye Enitan Ogunwusi Ojaja II, has ruled since 2015. Known as
+                    the “City of 401 Orisha (deities),” Ilé-Ifẹ̀ remains a vibrant center for traditional worship, with
+                    frequent festivals celebrating its many spiritual figures.<br>
+                    <br>The city is also globally renowned for its ancient bronze, stone, and terracotta sculptures,
+                    dating from 1200 to 1400 CE, reflecting its rich artistic heritage.
+
+                </p>
+            </section>
+
+            <section class="section-card discover-events">
+                <h3>Current Events</h3>
+                <p>Ife is always buzzing with activity! From local festivals and art exhibitions to business workshops
+                    and community gatherings, there's always something happening. Check our events calendar regularly
+                    for the latest updates and opportunities to engage with our vibrant community.</p>
+                <br>
+                <ul>
+                    <li> <strong>Ife Annual Business Summit</strong> - August 15-17, 2025</li>
+                    <li><strong>Local Artisans Market</strong> - Every Saturday at Central Square</li>
+                    <li><strong>Community Clean-Up Day</strong> - September 10, 2025</li>
+                </ul>
+            </section>
+
+            <section class="section-card image-montage discover-gallery">
+                <h3>Explore Ife</h3>
+                <div class="gallery">
+                    <img src="images/ifelandscape.webp" alt="Historic landmark in Ife">
+                    <img src="images/ife_palace.webp" alt="Ife Palace">
+                    <img src="images/oau_greenland.webp" alt="Natural scenery near Ife">
+                </div>
+                <p>Experience the beauty and diversity of Ife through these captivating images. From historical
+                    landmarks to vibrant markets and serene natural landscapes, Ife offers a unique blend of
+                    experiences.</p>
+            </section>
+
+            <section class="section-card discover-sidebar">
+                <h3>Your Visit</h3>
+                <p id="last-visit-message">Loading visit information...</p>
+            </section>
+
+            <section class="section-card discover-items-of-interest">
+                <h3>Items of Interest</h3>
+                <div id="items-of-interest-container" class="items-grid">
+                    <p class="text-center">Loading items of interest...</p>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
         <div class="container footer-content">
             <div class="contact-info">
                 <h3>Timcornels Chamber of Commerce</h3>
-                <p>10 Rue De La Paix</p>
-                <p>Timbuktu, Mali 999</p>
-                <p>Email: <a href="mailto:info@timcornels.org">info@timcornels.org</a></p>
-                <p>Phone: (223) 555-2300</p>
+                <p>10 Senior Staff Quarters, Ile-Ife</p>
+                <p>Osun State, Nigeria</p>
+                <p>Email: <a href="mailto:info@tim.org">info@timcornels.org</a></p>
+                <p>Phone: (224) 1111-234699</p>
             </div>
             <div class="social-media">
-                <a href="#" aria-label="Facebook"><img src="images/facebook-icon.png" alt="Facebook"></a>
-                <a href="#" aria-label="Twitter"><img src="images/twitter-icon.png" alt="Twitter"></a>
-                <a href="#" aria-label="LinkedIn"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="https://www.facebook.com/" aria-label="Facebook"><img src="images/facebook.svg"
+                        alt="Facebook"></a>
+                <a href="https://twitter.com/" aria-label="Twitter"><img src="images/twitter-x.svg" alt="Twitter"></a>
+                <a href="https://www.linkedin.com/in/oyetunji-cornelius-oyegoke-923540368" aria-label="LinkedIn"><img
+                        src="images/linkedin.svg" alt="LinkedIn"></a>
             </div>
             <div class="development-info">
                 <p>&copy; <span id="copyright-year"></span> Timcornels Chamber of Commerce</p>
