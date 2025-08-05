@@ -1,0 +1,68 @@
+{
+    "itemsOfInterest": [
+        {
+            "id": "item1",
+            "name": "Business Networking Events",
+            "image": "business-networking.webp",
+            "address": "Various Locations, Ife",
+            "description": "Connect with local entrepreneurs and professionals at our exclusive networking events. Foster partnerships and grow your business.",
+            "link": "#"
+        },
+        {
+            "id": "item2",
+            "name": "Development Workshops",
+            "image": "workshops.webp",
+            "address": "Chamber Training Center, Ife",
+            "description": "Enhance your skills with our expert-led workshops on marketing, finance, leadership, and more.",
+            "link": "#"
+        },
+        {
+            "id": "item3",
+            "name": "Community Engagement Programs",
+            "image": "community-engagement.webp",
+            "address": "Ife Community Hall, Ife",
+            "description": "Participate in initiatives that uplift our community, from clean-up drives to charity events.",
+            "link": "#"
+        },
+        {
+            "id": "item4",
+            "name": "Local Business Advocacy",
+            "image": "advocacy.webp",
+            "address": "Government Liaison Office, Ife",
+            "description": "We champion policies that support local businesses and ensure a favorable economic environment.",
+            "link": "#"
+        },
+        {
+            "id": "item5",
+            "name": "Exclusive Member Benefits",
+            "image": "member-benefits.webp",
+            "address": "Chamber Office, Ife",
+            "description": "Access special discounts, resources, and services available only to our valued members.",
+            "link": "#"
+        },
+        {
+            "id": "item6",
+            "name": "Economic Development Initiatives",
+            "image": "economic-development.webp",
+            "address": "Ife Business Council",
+            "description": "We drive projects and programs aimed at strengthening Ife's economy and attracting investment.",
+            "link": "#"
+        },
+        {
+            "id": "item7",
+            "name": "Tourism Promotion",
+            "image": "tourism-promotion.webp",
+            "address": "Ife Tourism Board",
+            "description": "Showcasing Ife's unique attractions to visitors, boosting local businesses and cultural exchange.",
+            "link": "#"
+        },
+        {
+            "id": "item8",
+            "name": "Education & Workforce Training",
+            "image": "education-training.webp",
+            "address": "Ife Vocational College",
+            "description": "Collaborating with educational institutions to develop a skilled workforce for future industry needs.",
+            "link": "#"
+        }
+    ]
+}
