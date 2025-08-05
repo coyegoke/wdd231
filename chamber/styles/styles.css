@@ -203,7 +203,7 @@ main {
 
 .events-section,
 .weather-section {
-    background-color: var(--secondary-color);
+    background-color: var(--text-color);
     color: var(--primary-color);
 }
 
