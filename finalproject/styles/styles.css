@@ -1,0 +1,748 @@
+/* style.css - Portfolio Design */
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --light-bg: #f4f7f6;
+    --dark-bg: #1a252f;
+    --text-color: #fff;
+    --border-color: #ddd;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--light-bg);
+    color: var(--text-color-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* --- Global Elements --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+}
+
+.btn-secondary:hover {
+    background-color: lighten(var(--secondary-color), 10%);
+}
+
+/* --- Header Styles --- */
+header {
+    background-color: var(--dark-bg);
+    color: var(--text-color-light);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.site-logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color-light);
+    text-decoration: none;
+}
+
+nav .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text-color-light);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 0.5rem 0;
+}
+
+.nav-menu a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--primary-color);
+}
+
+/* --- Main Content Layout --- */
+main {
+    padding: 2rem 0;
+}
+
+/* Hero Section (Homepage) */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1920x600/2c3e50/ffffff?text=Portfolio+Hero') no-repeat center center/cover;
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 4rem 1rem;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--text-color-light);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-image-section {
+    position: relative;
+    padding: 1rem;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-section .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-image-section .hero-image-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--text-color-light);
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay for text readability */
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.hero-image-overlay .hero-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    color: white;
+    /* Ensure text is visible on overlay */
+}
+
+.hero-image-overlay .call-to-action-btn {
+    background-color: var(--accent-color);
+    color: var(--text-color-light);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-image-overlay .call-to-action-btn:hover {
+    background-color: #c0392b;
+    /* A slightly darker shade of the accent color */
+}
+
+/* Projects Section (Homepage) */
+.projects-section {
+    padding: 3rem 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card-content {
+    padding: 1.5rem;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.project-card .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.plan-section {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.plan-section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.plan-section h3 {
+    color: var(--secondary-color);
+}
+
+.plan-section p,
+.plan-section ul {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.plan-section ul {
+    padding-left: 1.5rem;
+}
+
+.scenario-list li {
+    margin-bottom: 0.5rem;
+}
+
+.color-box {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+/* Project Detail Page */
+.project-detail-page {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.project-detail-page h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.project-detail-page .hero-image-full {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.project-detail-page .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-detail-page .project-meta span {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.project-detail-page .project-links {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Clients Page */
+.clients-page {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.clients-page h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.clients-page .intro-text {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.client-card {
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.client-card img {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.client-card img:hover {
+    filter: grayscale(0%);
+}
+
+.client-card h3 {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.client-card .testimonial {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.client-card .project-link {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.client-card .project-link:hover {
+    text-decoration: underline;
+}
+
+/* About Page */
+.about-page {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about-me-section .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--primary-color);
+}
+
+.about-me-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.about-me-section p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.about-me-section h3 {
+    color: var(--secondary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.skills-list li {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* Contact Page */
+.contact-page {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.contact-form-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-form-section .intro-text {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form .btn-primary {
+    align-self: flex-start;
+    /* Align button to the left */
+    margin-top: 1rem;
+}
+
+
+/* --- Footer Styles --- */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--text-color-light);
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-content .contact-info h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.footer-content .contact-info p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+.footer-content .contact-info a {
+    color: var(--text-color-light);
+    text-decoration: none;
+}
+
+.footer-content .contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(1);
+    /* Makes icons white */
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+.development-info {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+    width: 100%;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Tablets and larger (e.g., 768px and up) */
+@media (min-width: 768px) {
+    .header-content {
+        flex-wrap: nowrap;
+    }
+
+    .site-logo {
+        margin-bottom: 0;
+    }
+
+    nav .menu-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+
+    .nav-menu li {
+        margin: 0 0.8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .clients-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .about-me-section {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-me-section .profile-picture {
+        float: left;
+        /* Float image to the left */
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+        /* Adjust margin for text flow */
+    }
+
+    .about-me-section h2,
+    .about-me-section p,
+    .about-me-section h3,
+    .skills-list {
+        text-align: left;
+        /* Align text left */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .skills-list {
+        justify-content: flex-start;
+        /* Align skills to the left */
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .development-info {
+        border-top: none;
+        padding-top: 0;
+        width: auto;
+    }
+}
+
+/* Desktops and larger (e.g., 1024px and up) */
+@media (min-width: 1024px) {
+    .hero-content h1 {
+        font-size: 5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns for projects */
+    }
+
+    .clients-grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns for clients */
+    }
+}

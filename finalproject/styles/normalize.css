@@ -1,0 +1,104 @@
+/*
+ * normalize.css - A very basic and beginner-friendly CSS reset.
+ * This file aims to make browsers render all elements more consistently
+ * and in line with modern standards. It primarily removes default browser
+ * styling inconsistencies.
+ */
+
+/* 1. Box sizing for all elements */
+/* This ensures that padding and border are included in the element's total width and height. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin from the body */
+/* Browsers often add a default margin to the <body>, which can cause unwanted spacing. */
+body {
+    margin: 0;
+}
+
+/* 3. Set default font for the body */
+/* This provides a consistent base font for the entire page. */
+body {
+    font-family: sans-serif;
+    /* A generic, widely available sans-serif font */
+    line-height: 1.5;
+    /* Improve readability by setting a default line height */
+    -webkit-font-smoothing: antialiased;
+    /* Smoother font rendering on WebKit browsers */
+}
+
+/* 4. Improve image responsiveness and prevent overflow */
+/* Makes images responsive by default, scaling down if they are larger than their container. */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    /* Prevents extra space below images */
+    max-width: 100%;
+    /* Ensures images don't overflow their containers */
+}
+
+/* 5. Remove default margin from headings and paragraphs */
+/* Headings (h1-h6) and paragraphs (p) often come with default top/bottom margins. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    /* Remove default margins to control spacing with CSS */
+}
+
+/* 6. Remove default list styling */
+/* Removes bullets and default padding from unordered and ordered lists. */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 7. Make form elements inherit font styles */
+/* Ensures form elements (inputs, buttons, textareas, selects) inherit the font from the body. */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Prevent textareas from being resizable only horizontally */
+/* Allows textareas to be resized vertically, which is generally more useful. */
+textarea {
+    resize: vertical;
+}
+
+/* 9. Remove text decoration from links by default */
+/* Provides a clean slate for link styling. */
+a {
+    text-decoration: none;
+    color: inherit;
+    /* Inherit color from parent by default */
+}
+
+/* 10. Improve button cursor */
+/* Makes buttons clearly indicate they are clickable. */
+button {
+    cursor: pointer;
+}
+
+/* 11. Remove outline on focus for accessibility (use better focus styles) */
+/* While removing outlines can be tricky for accessibility, for a basic reset,
+   it's often done to allow custom focus styles. In a real project, ensure
+   you add clear visual focus indicators. */
+:focus {
+    outline: none;
+}
