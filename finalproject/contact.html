@@ -4,75 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Your Name Portfolio</title>
-    <meta name="description" content="Get in touch with Your Name for collaborations, project inquiries, or questions.">
-    <meta name="author" content="Your Name">
+    <title>Contact - OyeWrites Portfolio</title>
+    <meta name="description"
+        content="Contact Oyetunji Cornelius Oyegoke to discuss new projects, collaborations, or opportunities.">
+    <meta name="author" content="Oyetunji Cornelius Oyegoke">
 
-    <!-- Favicon -->
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Contact Me - OyeWrites Portfolio">
+    <meta property="og:description" content="Let's connect and build something amazing together.">
+    <meta property="og:image" content="https://placehold.co/1200x630/e67e22/000000?text=Contact+Me">
+    <meta property="og:url" content="http://yourdomain.com/contact.html">
+
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <header class="primary-header">
         <div class="container header-content">
-            <div class="site-logo">
-                <a href="index.html">Your Name</a>
+            <div class="site-name">
+                <img src="https://placehold.co/50x50/e67e22/000000?text=Logo" alt="OyeWrites Logo"
+                    class="site-logo-image">
+                <h1>OyeWrites</h1>
             </div>
-            <nav>
-                <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-                <ul class="nav-menu">
+            <nav class="primary-nav">
+                <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"
+                    aria-label="Toggle Navigation">&#9776;</button>
+                <ul id="primary-navigation" class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="clients.html">Clients</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="about.html">About</a>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container contact-page">
-        <section class="contact-form-section">
-            <h2>Get in Touch</h2>
-            <p class="intro-text">Have a project in mind, a question, or just want to say hello? Fill out the form
-                below, and I'll get back to you as soon as possible.</p>
-            <form action="#" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>I'm always open to new opportunities. Let's connect and build something amazing!</p>
+                <form id="contact-form" class="contact-form" action="form-action.html" method="get">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="primary-footer">
         <div class="container footer-content">
-            <div class="contact-info">
-                <h3>Connect With Me</h3>
-                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-                <p>Phone: (123) 456-7890</p>
+            <div class="footer-wireframe-placeholder">
+                <p>Placeholder for Wireframe Image & Video Recording</p>
+                <img src="https://placehold.co/400x200/cccccc/ffffff?text=Wireframe+Placeholder"
+                    alt="Wireframe Placeholder">
             </div>
-            <div class="social-media">
+            <div class="social-icons">
                 <a href="https://www.facebook.com/" aria-label="Facebook"><img src="images/facebook.svg"
                         alt="Facebook"></a>
                 <a href="https://twitter.com/" aria-label="Twitter"><img src="images/twitter-x.svg" alt="Twitter"></a>
@@ -80,13 +82,14 @@
                         src="images/linkedin.svg" alt="LinkedIn"></a>
             </div>
             <div class="development-info">
-                <p>&copy; <span id="copyright-year"></span> Your Name</p>
-                <p>Built with HTML, CSS, JS | Last Modified: <span id="last-modified"></span></p>
+                <p>&copy; <span id="copyright-year"></span> Oyetunji Cornelius Oyegoke. All rights reserved.</p>
+                <p>Oyetunji Cornelius Oyegoke | WDD 231</p>
+                <p>Last Modification: <span id="last-modified"></span></p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js" defer></script>
 </body>
 
 </html>
