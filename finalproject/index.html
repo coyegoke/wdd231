@@ -4,129 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oyetunji Cornelius Oyegoke - Portfolio</title>
+    <title>OyeWrites - Web Developer Portfolio</title>
     <meta name="description"
-        content="Your professional portfolio showcasing web development, design, and data science projects.">
-    <meta name="author" content="Your Name">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        content="A professional portfolio showcasing the web development and design projects of Oyetunji Cornelius Oyegoke.">
+    <meta name="author" content="Oyetunji Cornelius Oyegoke">
 
-    <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="Your Name - Professional Portfolio">
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="OyeWrites - Web Developer Portfolio">
     <meta property="og:description"
-        content="Explore my projects in web development, mobile apps, and data visualization.">
-    <meta property="og:image" content="https://placehold.co/1200x630/000000/ffffff?text=Your+Portfolio+OG+Image">
-    <meta property="og:url" content="http://www.yourportfolio.com/index.html"> <!-- Placeholder URL -->
+        content="Explore my work in front-end development, responsive design, and creative web solutions.">
+    <meta property="og:image" content="https://placehold.co/1200x630/e67e22/000000?text=OyeWrites+Portfolio">
+    <meta property="og:url" content="http://yourdomain.com/index.html">
 
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="js/main.js" defer></script>
-    <script src="js/portfolio.js" defer></script>
+    <script type="module" src="scripts/scripts.js" defer></script>
+    <script type="module" src="scripts/projects.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <header class="primary-header">
         <div class="container header-content">
-            <div class="site-logo">
-                <img src="https://placehold.co/50x50/2c3e50/f4f7f6?text=LOGO" alt="Timcornels Chamber of Commerce Logo">
-                <a href="index.html">My Portfolio</a>
+            <div class="site-name">
+                <img src="https://placehold.co/50x50/e67e22/000000?text=Logo" alt="OyeWrites Logo"
+                    class="site-logo-image">
+                <h1>OyeWrites</h1>
             </div>
-            <nav>
-                <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-                <ul class="nav-menu">
+            <nav class="primary-nav">
+                <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"
+                    aria-label="Toggle Navigation">&#9776;</button>
+                <ul id="primary-navigation" class="nav-menu">
                     <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="clients.html">Clients</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero-image-section">
-            <img src="https://placehold.co/1200x600/2c3e50/f4f7f6?text=Timcornels+Chamber"
-                alt="Hero-imahe for Portfolio" class="hero-image">
-            <div class="hero-image-overlay">
-                <h1 class="hero-text">Hi, I'm Oyetunji Cornelius Oyegoke</h1>
-                <p class="hero-text">A passionate Web Developer & Designer creating impactful digital experiences.</p>
-                <a href="#projects" class="call-to-action-btn">View My Work</a>
+        <!-- Hero Section with Background Image -->
+        <section class="hero-section">
+            <img src="https://placehold.co/1920x600/e67e22/ffffff?text=Professional+Web+Development"
+                alt="Portfolio background image" class="hero-image">
+            <div class="hero-overlay">
+                <div class="container hero-content">
+                    <h1>Hi, I'm Oyetunji Cornelius Oyegoke</h1>
+                    <p>A passionate Web Developer & Designer dedicated to crafting beautiful and functional digital
+                        experiences.</p>
+                    <a href="projects.html" class="btn btn-primary">View My Work</a>
+                </div>
             </div>
         </section>
 
-        <section class="plan-section">
-            <h2>A. Site Name</h2>
-            <p><strong>Site Name:</strong> PixelCraft Portfolios</p>
-            <p><strong>Reasoning:</strong> The name "PixelCraft" combines "pixel," a fundamental unit of digital art and
-                design, with "craft," which emphasizes skill, artistry, and careful construction. This name reflects the
-                purpose of the site: to showcase carefully crafted web development and design projects.</p>
-        </section>
-
-        <section class="plan-section">
-            <h2>B. Site Purpose</h2>
-            <p>The purpose of this website is to serve as a professional portfolio for a web developer/designer. It will
-                showcase a curated selection of projects, detailing the technologies used, the problem solved, and the
-                client or personal context. The site will also provide information about the creator's skills,
-                experience, and contact details to attract potential clients and employers.</p>
-        </section>
-
-        <section class="plan-section">
-            <h2>C. Scenarios</h2>
-            <p>These scenarios represent questions from potential users to guide the content of the site:</p>
-            <ul class="scenario-list">
-                <li>A potential client wants to know if I have experience building e-commerce websites or developing
-                    with a specific technology like React.</li>
-                <li>A recruiter is looking for my contact information or a link to my resume to schedule an interview.
-                </li>
-                <li>A fellow developer wants to see the code for a specific project to understand my technical approach
-                    and coding style.</li>
-            </ul>
-        </section>
-
-        <section class="plan-section">
-            <h2>D. Color Schema</h2>
-            <p>The site's color scheme is based on the following variables defined in the stylesheet:</p>
-            <ul>
-                <li><strong>Primary Color:</strong> <span class="color-box"
-                        style="background-color: var(--primary-color);"></span> <code>#3498db</code> (Vibrant Blue) -
-                    Used for headings, call-to-action buttons, and accent elements.</li>
-                <li><strong>Secondary Color:</strong> <span class="color-box"
-                        style="background-color: var(--secondary-color);"></span> <code>#2c3e50</code> (Dark Blue) -
-                    Used for main body text, navigation links, and primary content backgrounds in darker themes.</li>
-                <li><strong>Accent Color:</strong> <span class="color-box"
-                        style="background-color: var(--accent-color);"></span> <code>#e74c3c</code> (Red-Orange) - Used
-                    for highlights, hover states, and key visual cues to draw attention.</li>
-                <li><strong>Light Background:</strong> <span class="color-box"
-                        style="background-color: var(--light-bg);"></span> <code>#f4f7f6</code> (Off-White) - The main
-                    background color for light-themed sections.</li>
-                <li><strong>Dark Background:</strong> <span class="color-box"
-                        style="background-color: var(--dark-bg);"></span> <code>#1a252f</code> (Dark Grey) - Used for
-                    footers, headers, or other sections that require a darker theme.</li>
-            </ul>
-        </section>
-
-        <section id="projects" class="container projects-section">
-            <h2>My Recent Projects</h2>
-            <div id="projects-container" class="projects-grid">
-                <!-- Projects will be dynamically loaded here by JavaScript -->
-                <p>Loading projects...</p>
+        <section id="site-info-section" class="site-info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <article class="info-card">
+                        <h3>Site Name: OyeWrites</h3>
+                        <p>The site name "OyeWrites" is a fusion of my name and my passion for writing code. It
+                            serves as a
+                            personal brand that is both unique and relevant to my profession as a web developer.</p>
+                    </article>
+                    <article class="info-card">
+                        <h3>Site Purpose</h3>
+                        <p>The primary purpose of this website is to showcase my skills and completed projects as a
+                            web developer. It provides a platform for potential clients, employers, and collaborators
+                            to view my work, understand my technical abilities, and get in touch with me for new
+                            opportunities.</p>
+                    </article>
+                    <article class="info-card">
+                        <h3>Scenarios</h3>
+                        <p>This site is built to answer key questions from visitors:</p>
+                        <ul>
+                            <li>
+                                **Scenario 1:** "Can I see examples of responsive websites you have built?"
+                            </li>
+                            <li>
+                                **Scenario 2:** "How can I get in touch with you about a potential project?"
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Color Schema</h3>
+                        <p>The design utilizes a professional and modern color palette:</p>
+                        <ul>
+                            <li>
+                                --primary-color: #000000 (Black) is used for backgrounds on hero sections and
+                                footers to create a strong contrast.
+                            </li>
+                            <li>
+                                --secondary-color: #2c3e50 (Dark Slate Blue) is used for headings, primary buttons,
+                                and navigation links on light backgrounds.
+                            </li>
+                            <li>
+                                --accent-color: #e67e22 (Orange) is used to draw attention to call-to-action
+                                buttons, hover effects, and key information.
+                            </li>
+                            <li>
+                                --light-bg: #f4f4f4 (Light Gray) is the main background color for body sections.
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Typography</h3>
+                        <p>The entire website uses the **Poppins** font family. It is a clean, modern, and highly
+                            legible sans-serif font that enhances readability and gives the site a professional,
+                            approachable feel.</p>
+                    </article>
+                </div>
             </div>
-            <div class="text-center mt-4">
-                <a href="index.html" class="btn btn-secondary">Load More Projects (or refresh for random)</a>
+        </section>
+
+        <section id="projects-preview-section" class="projects-section">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div id="projects-preview-container" class="projects-grid">
+                    <!-- Dynamic project preview content will be injected here by JavaScript -->
+                    <p class="loading-message">Loading featured projects...</p>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="projects.html" class="btn btn-secondary">See All Projects</a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="primary-footer">
         <div class="container footer-content">
-            <div class="contact-info">
-                <h3>Connect With Me</h3>
-                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-                <p>Phone: (123) 456-7890</p>
+            <div class="footer-wireframe-placeholder">
+                <p>Placeholder for Wireframe Image & Video Recording</p>
+                <img src="https://placehold.co/400x200/cccccc/ffffff?text=Wireframe+Image" alt="Wireframe Placeholder">
             </div>
-            <div class="social-media">
+            <div class="social-icons">
                 <a href="https://www.facebook.com/" aria-label="Facebook"><img src="images/facebook.svg"
                         alt="Facebook"></a>
                 <a href="https://twitter.com/" aria-label="Twitter"><img src="images/twitter-x.svg" alt="Twitter"></a>
@@ -134,8 +148,9 @@
                         src="images/linkedin.svg" alt="LinkedIn"></a>
             </div>
             <div class="development-info">
-                <p>&copy; <span id="copyright-year"></span> Your Name</p>
-                <p>Built with HTML, CSS, JS | Last Modified: <span id="last-modified"></span></p>
+                <p>&copy; <span id="copyright-year"></span> Oyetunji Cornelius Oyegoke. All rights reserved.</p>
+                <p>Oyetunji Cornelius Oyegoke | WDD 231</p>
+                <p>Last Modification: <span id="last-modified"></span></p>
             </div>
         </div>
     </footer>
