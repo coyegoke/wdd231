@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "name": "Local Cafe Redesign",
+        "tagline": "A modern and responsive website overhaul.",
+        "description": "Redesigned a local cafe's website with a clean, modern aesthetic. The project focused on improving user experience, adding a dynamic menu, and optimizing for mobile devices. Implemented with HTML5, CSS3, and vanilla JavaScript.",
+        "client": "The Daily Grind Cafe",
+        "technologies": ["HTML5", "CSS3", "JavaScript", "Figma"],
+        "image_url": "https://placehold.co/400x250/3498db/ffffff?text=Project+1"
+    },
+    {
+        "id": 2,
+        "name": "E-commerce Platform",
+        "tagline": "A secure, user-friendly online store.",
+        "description": "Developed a full-stack e-commerce platform from scratch. Key features include a robust product catalog, secure checkout, user authentication, and an admin dashboard for content management. Built with React, Node.js, and MongoDB.",
+        "client": "Urban Apparel",
+        "technologies": ["React", "Node.js", "MongoDB", "Stripe API"],
+        "image_url": "https://placehold.co/400x250/2c3e50/ffffff?text=Project+2"
+    },
+    {
+        "id": 3,
+        "name": "Data Visualization Dashboard",
+        "tagline": "Turning complex data into actionable insights.",
+        "description": "Created a web-based dashboard for an analytics firm to visualize complex datasets. The tool features interactive charts, real-time data updates, and customizable filters. Powered by D3.js and a RESTful API.",
+        "client": "Innovate Analytics",
+        "technologies": ["D3.js", "JavaScript", "REST API", "CSS Grid"],
+        "image_url": "https://placehold.co/400x250/666/ffffff?text=Project+3"
+    },
+    {
+        "id": 4,
+        "name": "Mobile App UI/UX",
+        "tagline": "Designing a seamless fitness tracker.",
+        "description": "Designed and prototyped the user interface and user experience for a new fitness tracking mobile application. Focused on a clean, intuitive design that makes it easy for users to track workouts and set goals. Prototyped with Adobe XD.",
+        "client": "FitLife Solutions",
+        "technologies": ["UI/UX Design", "Adobe XD", "User Research", "Prototyping"],
+        "image_url": "https://placehold.co/400x250/9b59b6/ffffff?text=Project+4"
+    },
+    {
+        "id": 5,
+        "name": "Photography Portfolio",
+        "tagline": "A minimalist site for showcasing stunning images.",
+        "description": "A minimalist, high-performance portfolio website for a professional photographer. The site is optimized for fast loading of high-resolution images and features a simple, elegant gallery layout. Implemented with HTML5, CSS3, and JavaScript.",
+        "client": "Sarah Davis Photography",
+        "technologies": ["HTML5", "CSS3", "JavaScript", "WebP Optimization"],
+        "image_url": "https://placehold.co/400x250/e74c3c/ffffff?text=Project+5"
+    },
+    {
+        "id": 6,
+        "name": "Non-profit Website",
+        "tagline": "Spreading awareness for a good cause.",
+        "description": "Developed a new website for a non-profit organization to increase online donations and volunteer sign-ups. The site features a donation portal, event calendar, and a blog to share success stories. Built with a custom WordPress theme.",
+        "client": "Helping Hands Foundation",
+        "technologies": ["WordPress", "PHP", "CSS", "Donation Plugins"],
+        "image_url": "https://placehold.co/400x250/1abc9c/ffffff?text=Project+6"
+    },
+    {
+        "id": 7,
+        "name": "Interactive Landing Page",
+        "tagline": "Captivating users with dynamic animations.",
+        "description": "Designed and built an interactive landing page for a new tech product. The page includes captivating animations, a parallax scrolling effect, and a lead generation form. Developed using Vue.js and CSS animations.",
+        "client": "NexGen Innovations",
+        "technologies": ["Vue.js", "CSS Animations", "Parallax", "Lead Gen Forms"],
+        "image_url": "https://placehold.co/400x250/34495e/ffffff?text=Project+7"
+    },
+    {
+        "id": 8,
+        "name": "Recipe Finder App",
+        "tagline": "A fun tool for home cooks.",
+        "description": "Created a single-page application that allows users to search for recipes using ingredients they have on hand. The app fetches data from a third-party recipe API and displays detailed cooking instructions. Built with React.",
+        "client": "Personal Project",
+        "technologies": ["React", "Third-party APIs", "CSS Modules", "Webpack"],
+        "image_url": "https://placehold.co/400x250/f39c12/ffffff?text=Project+8"
+    },
+    {
+        "id": 9,
+        "name": "Real Estate Dashboard",
+        "tagline": "Tracking market trends in real time.",
+        "description": "A comprehensive dashboard for real estate agents to track property listings, market trends, and client interactions. The application uses dynamic charts and filters to provide a clear overview of the market. Built with Angular and a Firebase backend.",
+        "client": "Prestige Realty Group",
+        "technologies": ["Angular", "TypeScript", "Firebase", "Google Maps API"],
+        "image_url": "https://placehold.co/400x250/8e44ad/ffffff?text=Project+9"
+    },
+    {
+        "id": 10,
+        "name": "Online Resume Builder",
+        "tagline": "Creating professional resumes with ease.",
+        "description": "An online tool that helps users create professional resumes. The application features various templates, drag-and-drop functionality, and the ability to export to PDF. Developed with vanilla JavaScript and Bootstrap.",
+        "client": "Personal Project",
+        "technologies": ["JavaScript", "Bootstrap", "PDF Generation", "Drag and Drop"],
+        "image_url": "https://placehold.co/400x250/d35400/ffffff?text=Project+10"
+    },
+    {
+        "id": 11,
+        "name": "Social Media Clone",
+        "tagline": "A proof-of-concept social networking site.",
+        "description": "A basic social media clone to demonstrate proficiency in front-end and back-end development. Features include user profiles, a post feed, and a commenting system. Built using a MERN stack.",
+        "client": "Personal Project",
+        "technologies": ["MongoDB", "Express", "React", "Node.js"],
+        "image_url": "https://placehold.co/400x250/2980b9/ffffff?text=Project+11"
+    },
+    {
+        "id": 12,
+        "name": "Task Management App",
+        "tagline": "Organizing your day with a simple tool.",
+        "description": "A clean and simple task management application. Users can add, edit, and delete tasks, and a calendar view helps with scheduling. Utilizes local storage to persist data across sessions.",
+        "client": "Personal Project",
+        "technologies": ["Vanilla JS", "HTML", "CSS", "Local Storage"],
+        "image_url": "https://placehold.co/400x250/27ae60/ffffff?text=Project+12"
+    },
+    {
+        "id": 13,
+        "name": "Restaurant Reservation System",
+        "tagline": "Streamlining bookings for a popular eatery.",
+        "description": "Developed a full-featured web-based reservation system for a fine-dining restaurant. The system allows customers to book tables online and provides the restaurant staff with an admin panel to manage reservations. Built with Python (Django) and JavaScript.",
+        "client": "Gourmet Bites",
+        "technologies": ["Python", "Django", "JavaScript", "PostgreSQL"],
+        "image_url": "https://placehold.co/400x250/c0392b/ffffff?text=Project+13"
+    },
+    {
+        "id": 14,
+        "name": "Interactive Portfolio Site",
+        "tagline": "An engaging showcase for creative work.",
+        "description": "This project is a highly interactive personal portfolio for a graphic designer. It features unique scrolling effects, hover animations, and a custom cursor to provide a memorable user experience. Built with a mix of vanilla JavaScript and Three.js.",
+        "client": "Elena Rossi Designs",
+        "technologies": ["JavaScript", "CSS Animations", "Three.js", "UI/UX Design"],
+        "image_url": "https://placehold.co/400x250/f1c40f/ffffff?text=Project+14"
+    },
+    {
+        "id": 15,
+        "name": "Educational Quiz App",
+        "tagline": "A fun way to learn and test knowledge.",
+        "description": "An educational web application featuring customizable quizzes. The app allows users to select topics, track their scores, and view detailed feedback on their answers. Developed with React and a quiz API.",
+        "client": "Personal Project",
+        "technologies": ["React", "Quiz API", "State Management", "CSS"],
+        "image_url": "https://placehold.co/400x250/e67e22/ffffff?text=Project+15"
+    }
+]
