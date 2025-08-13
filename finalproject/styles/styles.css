@@ -7,7 +7,6 @@
     --text-color: #fff;
     --border-color: #ddd;
     --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
     --font-family: 'Poppins', sans-serif;
     --border-radius: 8px;
     --transition-speed: 0.3s;
@@ -39,12 +38,10 @@ body {
     padding: 0 1rem;
 }
 
-/* --- Typography --- */
 h1,
 h2,
 h3 {
     color: var(--secondary-color);
-    font-weight: 700;
     line-height: 1.2;
 }
 
@@ -76,13 +73,13 @@ h3 {
 }
 
 .btn-primary {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     color: var(--text-color);
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     transform: translateY(-2px);
 }
 
@@ -117,7 +114,7 @@ h3 {
     align-items: center;
 }
 
-/* New header styling for logo and brand name */
+/* logo and brand name */
 .site-name {
     display: flex;
     align-items: center;
@@ -185,15 +182,14 @@ h3 {
 
 /* --- Main Sections --- */
 main {
-    padding-top: 0;
-    /* Adjusted to allow hero section to go to top */
+    padding-bottom: 4rem;
 }
 
 section {
-    padding: 4rem 0;
+    padding: 0;
 }
 
-/* Updated Hero Section styles */
+/* Hero Section */
 .hero-section {
     position: relative;
     width: 100%;
