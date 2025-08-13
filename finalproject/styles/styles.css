@@ -172,7 +172,6 @@ h3 {
 
 .menu-toggle {
     display: none;
-    /* Hidden on large screens by default */
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -355,7 +354,7 @@ section {
     align-items: center;
 }
 
-/* --- About Page Styles --- */
+/* About Page */
 .about-page {
     padding-top: 4rem;
 }
@@ -409,7 +408,7 @@ section {
 }
 
 
-/* --- Footer --- */
+/* Footer */
 .primary-footer {
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -419,6 +418,14 @@ section {
 
 .primary-footer p {
     color: var(--text-color);
+}
+
+.primary-footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    transition: color var(--transition-speed);
 }
 
 .footer-content {
@@ -435,6 +442,12 @@ section {
 .footer-wireframe-placeholder p {
     font-style: italic;
     margin-bottom: 1rem;
+}
+
+.footer-wireframe-placeholder img {
+    width: 50px;
+    height: 50px;
+    align-items: center;
 }
 
 .social-icons {
@@ -488,7 +501,6 @@ section {
 .modal-content {
     background-color: var(--light-bg);
     color: var(--secondary-color);
-    /* ensures text is readable */
     padding: 2rem;
     border-radius: var(--border-radius);
     max-width: 90%;
@@ -535,7 +547,7 @@ section {
     }
 }
 
-/* --- Media Queries (Mobile-first) --- */
+/* Media Queries */
 
 /* Mobile navigation toggle */
 .primary-nav .nav-menu {
@@ -593,7 +605,6 @@ section {
         flex-direction: row;
         justify-content: space-between;
         gap: 0;
-        /* Reset gap for row layout */
     }
 
     .footer-wireframe-placeholder,
