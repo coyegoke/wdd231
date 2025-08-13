@@ -1,25 +1,12 @@
-/*
-    CSS for Oyetunji Cornelius Oyegoke's Personal Portfolio
-    Adheres to design principles of proximity, alignment, repetition, and contrast.
-    Uses a mobile-first approach for responsive design.
-*/
-
 /* --- Global Styles & Variables --- */
 :root {
     --primary-color: #000000;
-    /* Black for backgrounds and text */
     --secondary-color: #2c3e50;
-    /* Dark Slate Blue for headings, primary buttons */
     --accent-color: #e67e22;
-    /* Vibrant Orange for accents and highlights */
     --light-bg: #f4f4f4;
-    /* Light gray for background */
     --text-color: #fff;
-    /* White text, for use on dark backgrounds */
     --border-color: #ddd;
-    /* Light gray for borders */
     --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* Soft shadow for depth */
 
     --font-family: 'Poppins', sans-serif;
     --border-radius: 8px;
@@ -43,7 +30,6 @@ body {
     line-height: 1.6;
     background-color: var(--light-bg);
     color: var(--secondary-color);
-    /* Adjusted for readability on light background */
     font-size: 1rem;
 }
 
