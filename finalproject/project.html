@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - OyeWrites Portfolio</title>
+    <meta name="description"
+        content="A comprehensive showcase of web development and design projects by Oyetunji Cornelius Oyegoke.">
+    <meta name="author" content="Oyetunji Cornelius Oyegoke">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="My Projects - OyeWrites Portfolio">
+    <meta property="og:description" content="View a full gallery of my professional work in web development.">
+    <meta property="og:image" content="https://placehold.co/1200x630/e67e22/000000?text=Projects+Gallery">
+    <meta property="og:url" content="http://yourdomain.com/projects.html">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/scripts.js" defer></script>
+    <script type="module" src="scripts/projects.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="primary-header">
+        <div class="container header-content">
+            <div class="site-name">
+                <img src="https://placehold.co/50x50/e67e22/000000?text=Logo" alt="OyeWrites Logo"
+                    class="site-logo-image">
+                <h1>OyeWrites</h1>
+            </div>
+            <nav class="primary-nav">
+                <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"
+                    aria-label="Toggle Navigation">&#9776;</button>
+                <ul id="primary-navigation" class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="projects-section">
+            <div class="container">
+                <h2>All My Projects</h2>
+                <div id="projects-container" class="projects-grid">
+                    <!-- Dynamic project content will be injected here by JavaScript -->
+                    <p class="loading-message">Loading all projects...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="primary-footer">
+        <div class="container footer-content">
+            <div class="footer-wireframe-placeholder">
+                <p>Placeholder for Wireframe Image & Video Recording</p>
+                <img src="https://placehold.co/400x200/cccccc/ffffff?text=Wireframe+Placeholder"
+                    alt="Wireframe Placeholder">
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" aria-label="Facebook"><img src="images/facebook.svg"
+                        alt="Facebook"></a>
+                <a href="https://twitter.com/" aria-label="Twitter"><img src="images/twitter-x.svg" alt="Twitter"></a>
+                <a href="https://www.linkedin.com/in/oyetunji-cornelius-oyegoke-923540368" aria-label="LinkedIn"><img
+                        src="images/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="copyright-year"></span> Oyetunji Cornelius Oyegoke. All rights reserved.</p>
+                <p>Oyetunji Cornelius Oyegoke | WDD 231</p>
+                <p>Last Modification: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <dialog id="project-modal" class="modal">
+        <article class="modal-content">
+            <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+            <div id="modal-project-details">
+                <!-- Dynamic project details will be loaded here -->
+            </div>
+        </article>
+    </dialog>
+
+</body>
+
+</html>
