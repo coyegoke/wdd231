@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Your Name Portfolio</title>
+    <meta name="description"
+        content="Learn more about Your Name's background, skills, and passion for web development.">
+    <meta name="author" content="Your Name">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="site-logo">
+                <a href="index.html">Your Name</a>
+            </div>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="clients.html">Clients</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container about-page">
+        <section class="about-me-section">
+            <img src="images/profile.jpg" alt="Your Name Profile Picture" class="profile-picture">
+            <h2>About Me</h2>
+            <p>Hello! I'm [Your Name], a passionate web developer with a keen eye for design and a strong focus on
+                creating user-friendly and efficient web solutions. My journey into web development began [mention
+                when/how, e.g., '5 years ago when I built my first personal blog'], and since then, I've been dedicated
+                to mastering modern web technologies.</p>
+            <p>I specialize in front-end development, bringing designs to life with clean, semantic HTML, responsive
+                CSS, and interactive JavaScript. I'm proficient in frameworks like React and enjoy exploring new tools
+                and techniques to build robust and scalable applications. My goal is to craft engaging digital
+                experiences that are both visually appealing and highly functional.</p>
+            <p>Beyond coding, I enjoy [mention a hobby or interest, e.g., 'hiking, reading sci-fi novels, and
+                experimenting with new recipes']. I believe continuous learning and a curious mindset are key to staying
+                innovative in the ever-evolving tech landscape.</p>
+            <h3>My Skills</h3>
+            <ul class="skills-list">
+                <li>HTML5 & CSS3 (Flexbox, Grid)</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React.js</li>
+                <li>Responsive Web Design</li>
+                <li>UI/UX Principles</li>
+                <li>Git & GitHub</li>
+                <li>RESTful APIs</li>
+                <li>[Add other skills, e.g., Node.js, Python, SQL, Figma, Photoshop]</li>
+            </ul>
+            <p>Feel free to explore my projects or get in touch if you have a project in mind!</p>
+            <a href="contact.html" class="btn btn-primary">Contact Me</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="contact-info">
+                <h3>Connect With Me</h3>
+                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/" aria-label="Facebook"><img src="images/facebook.svg"
+                        alt="Facebook"></a>
+                <a href="https://twitter.com/" aria-label="Twitter"><img src="images/twitter-x.svg" alt="Twitter"></a>
+                <a href="https://www.linkedin.com/in/oyetunji-cornelius-oyegoke-923540368" aria-label="LinkedIn"><img
+                        src="images/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="copyright-year"></span> Your Name</p>
+                <p>Built with HTML, CSS, JS | Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
