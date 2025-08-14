@@ -1,11 +1,5 @@
 // project-loader.js - ES Module for dynamic project content.
 
-// This module handles:
-// 1. Fetching project data from a JSON file.
-// 2. Dynamic generation of project cards.
-// 3. Opening and closing a modal dialog with project details.
-// 4. Array method usage for data processing.
-// 5. Template literals for HTML creation.
 
 // Function to fetch project data from the local JSON file.
 export async function fetchProjects() {
